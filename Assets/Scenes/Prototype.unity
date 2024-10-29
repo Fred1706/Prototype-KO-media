@@ -2191,6 +2191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boxing_ring (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9194509242015492025, guid: 39c20a5bf6804e642b5cb6bd503fe6c6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aeeaf92a712bc424daccb7432bf1b36b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
