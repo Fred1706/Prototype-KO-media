@@ -7,7 +7,7 @@ public class CollisionJoueur : MonoBehaviour
     [SerializeField]
     private GameObject XrOrigin;
     [SerializeField]
-    private float requiredVelocity = 5;
+    private float requiredVelocity = 3;
     private void OnTriggerEnter(Collider other){
 
         VelocityTracker velocityTracker = XrOrigin.GetComponent<VelocityTracker>();
