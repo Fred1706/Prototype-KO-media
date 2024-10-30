@@ -17,13 +17,16 @@ public class VelocityTracker : MonoBehaviour
     private Vector3 rightControllerDistance;
     private Vector3 rightControllerPosition;
 
-    private Vector3 oldPos;
+    private Vector3 oldPosl;
+    private Vector3 oldPosr;
 
-    public float velocity;
+    public float velocityl;
+    public float velocityr;
 
     //Initialise la vielle position
     void Start(){
-        oldPos = new Vector3(0,0,0);
+        oldPosl = new Vector3(0,0,0);
+        oldPosr = new Vector3(0,0,0);
     }
 
     void FixedUpdate(){
@@ -31,14 +34,20 @@ public class VelocityTracker : MonoBehaviour
         leftControllerPosition = leftController.position;
         rightControllerPosition = rightController.position;
         //Prend la nouvelle position lors de l'update et update la variable
-        Vector3 newpos = leftControllerPosition;
+        Vector3 newposl = leftControllerPosition;
+        Vector3 newposr = rightControllerPosition;
         //Compare les deux positions et le divise avec deltatime pour donner la velocité
-        Vector3 distance = ((newpos - oldPos) / Time.deltaTime);
-        velocity = distance.magnitude;
-        //Reset la vélocité
-        oldPos = newpos;
+        Vector3 distancel = ((newposl - oldPosl) / Time.deltaTime);
+        velocityl = distancel.magnitude;
 
-        //Debug.Log(velocity);
+        Vector3 distancer = ((newposr - oldPosr) / Time.deltaTime);
+        velocityr = distancer.magnitude;
+        //Reset la vélocité
+        oldPosr = newposr;
+
+        oldPosl = newposl;
+
+        Debug.Log(velocityl + "," + velocityr);
     }
 
     

@@ -13,11 +13,11 @@ public class CollisionJoueur : MonoBehaviour
         VelocityTracker velocityTracker = XrOrigin.GetComponent<VelocityTracker>();
 
         //Vérifie la collision avec un gant.
-        if(other.transform.tag == "Glove" && velocityTracker.velocity >= requiredVelocity){
+        if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity){
             Debug.Log("Blocked");
         }
         //Vérifie la collision avec un joueur.
-        else if(other.transform.tag == "Player" && velocityTracker.velocity >= requiredVelocity){
+        else if(other.transform.tag == "Player" && velocityTracker.velocityr >= requiredVelocity){
             Debug.Log("Hit");
         }
         

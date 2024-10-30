@@ -857,6 +857,7 @@ GameObject:
   - component: {fileID: 1188893538}
   - component: {fileID: 1188893543}
   - component: {fileID: 1188893539}
+  - component: {fileID: 1188893544}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -1133,6 +1134,33 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
+--- !u!54 &1188893544
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188893537}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1228870792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,6 +1364,7 @@ GameObject:
   - component: {fileID: 1377896332}
   - component: {fileID: 1377896337}
   - component: {fileID: 1377896333}
+  - component: {fileID: 1377896338}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -1612,6 +1641,33 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
+--- !u!54 &1377896338
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377896331}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1477974278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,6 +1680,7 @@ GameObject:
   - component: {fileID: 1477974280}
   - component: {fileID: 1477974279}
   - component: {fileID: 1477974282}
+  - component: {fileID: 1477974283}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -1694,6 +1751,22 @@ MonoBehaviour:
   head: {fileID: 1578496662}
   leftHand: {fileID: 1188893538}
   RightHand: {fileID: 1377896332}
+--- !u!114 &1477974283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477974278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676295500987d624aa12c850c2df2e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftController: {fileID: 1188893538}
+  rightController: {fileID: 1377896332}
+  velocityl: 0
+  velocityr: 0
 --- !u!1 &1578496661
 GameObject:
   m_ObjectHideFlags: 0
