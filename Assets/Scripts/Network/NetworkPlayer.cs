@@ -23,9 +23,9 @@ public class NetworkPlayer : NetworkBehaviour
             {
             item.enabled = false;
             }
-
-
         }
+
+       
 
 
     }
