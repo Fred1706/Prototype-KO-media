@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class CollisionJoueur : MonoBehaviour
 {
-    // --Test velocity
-    // private Rigidbody rb;
-    // private float speed;
-
-    // void Start(){
-    //     rb = GetComponent<Rigidbody>();
-        
-    // }
-    
-
-    // void Update(){
-    //     speed = rb.velocity.magnitude;
-    //     Debug.Log(speed);
-    //     // if(speed == 1.0f){
-    //     //     Debug.Log("Speed Test");
-    //     // }
-    // }
+    [SerializeField]
+    private GameObject XrOrigin;
+    [SerializeField]
+    private float requiredVelocity = 5;
     private void OnTriggerEnter(Collider other){
+
+        VelocityTracker velocityTracker = XrOrigin.GetComponent<VelocityTracker>();
+
         //Vérifie la collision avec un gant.
-        if(other.transform.tag == "Glove"){
+        if(other.transform.tag == "Glove" && velocityTracker.velocity >= requiredVelocity){
             Debug.Log("Blocked");
         }
         //Vérifie la collision avec un joueur.
-        else if(other.transform.tag == "Player"){
+        else if(other.transform.tag == "Player" && velocityTracker.velocity >= requiredVelocity){
             Debug.Log("Hit");
         }
         
