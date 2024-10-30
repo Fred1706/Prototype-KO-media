@@ -25,6 +25,8 @@ public class NetworkPlayer : NetworkBehaviour
             }
         }
 
+       
+
 
     }
   
@@ -35,6 +37,7 @@ public class NetworkPlayer : NetworkBehaviour
         if(IsOwner){
 
 
+        
         root.position = RigReferences.Singleton.root.position;
         root.rotation = RigReferences.Singleton.root.rotation;
 
@@ -48,6 +51,9 @@ public class NetworkPlayer : NetworkBehaviour
         RightHand.rotation = RigReferences.Singleton.RightHand.rotation;
 
         }
+
+        
+
         
     }
 }
