@@ -39,22 +39,6 @@ public class NetworkPlayer : NetworkBehaviour
             headTag.tag = "Player1";
         }
 
-
-
-
-
-        
-
-
-
-
-        
-
-
-       
-       
-
-
     }
   
 
