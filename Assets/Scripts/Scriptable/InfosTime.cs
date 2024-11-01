@@ -10,6 +10,8 @@ public class InfosTime : ScriptableObject
     public float Time;
     public float StartTime;
 
+    public int ready;
+
     
 
 }

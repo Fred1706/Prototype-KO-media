@@ -35,7 +35,7 @@ public class NetworkPlayer : NetworkBehaviour
 
             headTag.tag = "Player";
         }
-        else if(IsHost && IsOwner){
+        else {
             headTag.tag = "Player1";
         }
 
