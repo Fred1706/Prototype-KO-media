@@ -17,7 +17,7 @@ public class NetworkData : NetworkBehaviour
 
 
 
-    private void Start()
+    private void Update()
     {
         if (IsServer)
         {
