@@ -11,6 +11,8 @@ public class NetworkPlayer : NetworkBehaviour
     public Transform leftHand;
     public Transform RightHand;
 
+    public GameObject headTag;
+
 
     public Renderer[] meshToDisable;
     // Start is called before the first frame update
@@ -25,6 +27,31 @@ public class NetworkPlayer : NetworkBehaviour
             }
         }
 
+
+
+        if(!IsHost && IsOwner){
+
+
+
+            headTag.tag = "Player";
+        }
+        else if(IsHost && IsOwner){
+            headTag.tag = "Player1";
+        }
+
+
+
+
+
+        
+
+
+
+
+        
+
+
+       
        
 
 

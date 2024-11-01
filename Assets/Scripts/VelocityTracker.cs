@@ -47,7 +47,7 @@ public class VelocityTracker : MonoBehaviour
 
         oldPosl = newposl;
 
-        Debug.Log(velocityl + "," + velocityr);
+        
     }
 
     
