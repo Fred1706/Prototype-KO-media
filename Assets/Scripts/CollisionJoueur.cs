@@ -10,6 +10,8 @@ public class CollisionJoueur : MonoBehaviour
     [SerializeField]
     private float requiredVelocity = 3;
 
+    
+
 
      
     [SerializeField]
@@ -35,9 +37,11 @@ public class CollisionJoueur : MonoBehaviour
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player" && velocityTracker.velocityr >= requiredVelocity){
-            Debug.Log("Hit");
+            
 
             infoPlayer2.life --;
+
+            
         }
 
 
@@ -50,9 +54,11 @@ public class CollisionJoueur : MonoBehaviour
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player" && velocityTracker.velocityl >= requiredVelocity){
-            Debug.Log("Hit");
+            
 
             infoPlayer2.life --;
+
+           
         }
 
 
@@ -66,9 +72,10 @@ public class CollisionJoueur : MonoBehaviour
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityr >= requiredVelocity){
-            Debug.Log("Hit");
-
+            
             infoPlayer1.life --;
+
+           
         }
 
 
@@ -81,9 +88,11 @@ public class CollisionJoueur : MonoBehaviour
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityl >= requiredVelocity){
-            Debug.Log("Hit");
+            
 
             infoPlayer1.life --;
+
+           
         }
         
     }
