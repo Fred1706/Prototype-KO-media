@@ -18,6 +18,8 @@ public class NetworkConnect : MonoBehaviour
      private Lobby currentLobby;
      private float heartBeatTimer;
 
+     public GameObject XRorigin;
+
      /// <summary>
      /// Awake is called when the script instance is being loaded.
      /// </summary>
@@ -42,6 +44,9 @@ public class NetworkConnect : MonoBehaviour
 
 
      NetworkManager.Singleton.StartClient();
+
+
+     DifferentPosition();
           }
           catch{
                Create();
@@ -74,6 +79,8 @@ public class NetworkConnect : MonoBehaviour
      currentLobby = await Lobbies.Instance.CreateLobbyAsync("Lobby Name" , maxConnection , lobbyOptions);
 
      NetworkManager.Singleton.StartHost();
+
+     
    }
 
    public async void Join()
@@ -93,9 +100,6 @@ public class NetworkConnect : MonoBehaviour
 
 
 
-   /// <summary>
-   /// Update is called every frame, if the MonoBehaviour is enabled.
-   /// </summary>
    private void Update()
    {
      if(heartBeatTimer > 15)
@@ -108,5 +112,22 @@ public class NetworkConnect : MonoBehaviour
 
      heartBeatTimer += Time.deltaTime;
    }
+
+
+
+
+   void DifferentPosition()
+    {
+
+
+        XRorigin.transform.position = new Vector3(-1, 0, -1);
+
+
+        XRorigin.transform.rotation = Quaternion.Euler(0, 38, 0);
+
+
+
+
+    }
 
 }
