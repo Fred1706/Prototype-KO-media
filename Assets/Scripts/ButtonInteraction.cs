@@ -8,9 +8,15 @@ public class ButtonInteraction : MonoBehaviour
     private int player1Score = 0;
     private int player2Score = 0;
     [SerializeField]
+    private GameObject _powerUpManager;
+    [SerializeField]
     private GameObject _buttonPlayerWinObject;
     [SerializeField]
     private TMP_Text _buttonPlayerWinText;
+    [SerializeField]
+    private InfosPlayer _player1;
+    [SerializeField]
+    private InfosPlayer _player2;
 
     private void OnPressP1()
     {
@@ -32,11 +38,13 @@ public class ButtonInteraction : MonoBehaviour
         if(player1Score > player2Score){
             Debug.Log("Player 1 wins!");
             _buttonPlayerWinObject.SetActive(true);
+            _player1.power = true;
             _buttonPlayerWinText.text = "Player 1 Wins!";
         }
         else if(player1Score < player2Score){
             Debug.Log("Player 2 wins!");
             _buttonPlayerWinObject.SetActive(true);
+            _player2.power = true;
             _buttonPlayerWinText.text = "Player 2 Wins!";
         }
         else{
@@ -44,6 +52,7 @@ public class ButtonInteraction : MonoBehaviour
             _buttonPlayerWinObject.SetActive(true);
             _buttonPlayerWinText.text = "Draw!";
         }
+        _powerUpManager.GetComponent<PowerUpManager>().PowerUpSelection();
     }
 
 }
