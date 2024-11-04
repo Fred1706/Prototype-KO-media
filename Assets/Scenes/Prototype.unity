@@ -987,7 +987,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 923599960}
         m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
-        m_MethodName: StartFight
+        m_MethodName: addPoint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

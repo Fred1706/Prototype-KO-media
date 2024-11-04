@@ -23,27 +23,30 @@ public class StartGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(infosTime.ready == 2)
+        {
+
+            StartFight();
+
+             }
     }
 
 
-    public void StartFight(){
+    private void StartFight(){
 
+        canvasPlayer.SetActive(true);
+
+        canvasStart.SetActive(false);
+
+        infosTime.Time = infosTime.StartTime; 
+        infosPlayer1.life = 5;
+        infosPlayer2.life = 5;
+        infosTime.ready = 0;
+    }
+
+
+    public void addPoint(){
         infosTime.ready ++;
-
-
-
-        if(infosTime.ready == 2)
-        {
-            canvasPlayer.SetActive(true);
-
-            canvasStart.SetActive(false);
-
-            infosTime.Time = infosTime.StartTime; 
-            infosPlayer1.life = 5;
-            infosPlayer2.life = 5;
-        }
-        
     }
 
 }
