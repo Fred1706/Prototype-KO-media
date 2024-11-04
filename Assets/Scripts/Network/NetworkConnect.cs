@@ -13,7 +13,7 @@ using Unity.Services.Lobbies.Models;
 
 public class NetworkConnect : MonoBehaviour
 {
-     public int maxConnection = 20;
+     public int maxConnection = 2;
      public UnityTransport transport;
      private Lobby currentLobby;
      private float heartBeatTimer;

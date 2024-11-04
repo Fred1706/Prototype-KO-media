@@ -12,6 +12,8 @@ public class EndGame : MonoBehaviour
 
     public GameObject canvasEnd; 
 
+    public GameObject canvasStart; 
+
     public GameObject leftController; 
 
     public GameObject rightController; 
@@ -60,7 +62,15 @@ public class EndGame : MonoBehaviour
 
     private void ResetGame(){
 
-        Debug.Log("reset");
+        infosTime.ready = 0;
+
+
+
+        leftController.SetActive(true);
+        rightController.SetActive(true);
+
+        canvasStart.SetActive(true);
+        canvasEnd.SetActive(false);
 
     }
 }
