@@ -12,6 +12,12 @@ public class InfosTime : ScriptableObject
 
     public int ready;
 
+
+    private void OnEnable()
+    {
+        
+       ready = 0;
+    }
     
 
 }

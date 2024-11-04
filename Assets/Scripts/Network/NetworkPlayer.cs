@@ -12,6 +12,7 @@ public class NetworkPlayer : NetworkBehaviour
     public Transform RightHand;
 
     public GameObject headTag;
+    
 
 
     public Renderer[] meshToDisable;
@@ -35,10 +36,12 @@ public class NetworkPlayer : NetworkBehaviour
 
             headTag.tag = "Player";
         }
-        else {
+        else if(IsHost && IsOwner){
             headTag.tag = "Player1";
         }
 
+
+       
     }
   
 
@@ -67,4 +70,8 @@ public class NetworkPlayer : NetworkBehaviour
 
         
     }
+
+
+
+    
 }
