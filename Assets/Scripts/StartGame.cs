@@ -28,7 +28,7 @@ public class StartGame : MonoBehaviour
 
             StartFight();
 
-             }
+        }
     }
 
 
