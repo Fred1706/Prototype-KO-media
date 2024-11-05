@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Glove
   - Player1
+  - Glove1
   layers:
   - Default
   - TransparentFX
