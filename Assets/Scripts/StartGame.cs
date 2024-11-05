@@ -26,7 +26,7 @@ public class StartGame : MonoBehaviour
         if(infosTime.ready == 2)
         {
 
-            StartFight();
+            Invoke("StartFight", 1.0f);
 
         }
     }
@@ -44,7 +44,7 @@ public class StartGame : MonoBehaviour
         infosTime.ready = 1;
 
         
-        
+
     }
 
 
