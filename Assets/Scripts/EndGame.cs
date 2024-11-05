@@ -14,6 +14,8 @@ public class EndGame : MonoBehaviour
 
     public GameObject canvasStart; 
 
+    public GameObject canvasPlayer; 
+
     public GameObject leftController; 
 
     public GameObject rightController; 
@@ -50,6 +52,7 @@ public class EndGame : MonoBehaviour
             Invoke("ResetGame", 5.0f);
 
             canvasEnd.SetActive(true);
+            canvasPlayer.SetActive(false);
             leftController.SetActive(false);
             rightController.SetActive(false);
        

@@ -41,9 +41,10 @@ public class StartGame : MonoBehaviour
         infosTime.Time = infosTime.StartTime; 
         infosPlayer1.life = 5;
         infosPlayer2.life = 5;
-        infosTime.ready = 0;
+        infosTime.ready = 1;
 
-        Debug.Log("grtegre");
+        
+        
     }
 
 
