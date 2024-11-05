@@ -609,6 +609,8 @@ MonoBehaviour:
   leftHand: {fileID: 1753680342726738195}
   RightHand: {fileID: 114777337873728729}
   headTag: {fileID: 7983082604977190351}
+  leftHandTag: {fileID: 4647951728479612714}
+  rightHandTag: {fileID: 3687660596112425846}
   meshToDisable:
   - {fileID: 5945504084321053658}
   - {fileID: 8509399625138598086}

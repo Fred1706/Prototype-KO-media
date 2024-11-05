@@ -45,8 +45,7 @@ public class EndGame : MonoBehaviour
             Debug.Log("partie terminer");
 
             infosTime.Time = infosTime.StartTime;
-            infosPlayer1.life = 5;
-            infosPlayer2.life = 5;
+            
 
             Invoke("ResetGame", 5.0f);
 
@@ -64,7 +63,8 @@ public class EndGame : MonoBehaviour
 
         infosTime.ready = 0;
 
-
+        infosPlayer1.life = 5;
+        infosPlayer2.life = 5;
 
         leftController.SetActive(true);
         rightController.SetActive(true);

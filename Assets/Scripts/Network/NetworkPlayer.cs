@@ -12,6 +12,10 @@ public class NetworkPlayer : NetworkBehaviour
     public Transform RightHand;
 
     public GameObject headTag;
+    public GameObject leftHandTag;
+    public GameObject rightHandTag;
+    
+
     
 
 
@@ -35,9 +39,13 @@ public class NetworkPlayer : NetworkBehaviour
 
 
             headTag.tag = "Player";
+            leftHandTag.tag = "Glove";
+            rightHandTag.tag = "Glove";
         }
         else if(IsHost && IsOwner){
             headTag.tag = "Player1";
+             leftHandTag.tag = "Glove1";
+            rightHandTag.tag = "Glove1";
         }
 
 

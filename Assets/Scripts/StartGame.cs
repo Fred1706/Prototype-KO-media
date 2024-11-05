@@ -47,8 +47,6 @@ public class StartGame : MonoBehaviour
     }
 
 
-    public void addPoint(){
-        infosTime.ready ++;
-    }
+   
 
 }
