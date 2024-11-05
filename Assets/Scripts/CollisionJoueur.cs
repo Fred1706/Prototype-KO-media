@@ -10,9 +10,8 @@ public class CollisionJoueur : MonoBehaviour
     [SerializeField]
     private float requiredVelocity = 3;
 
-    
-
-
+    [SerializeField]
+    private GameObject audioManager;
      
     [SerializeField]
     private InfosPlayer infoPlayer1;
@@ -34,11 +33,12 @@ public class CollisionJoueur : MonoBehaviour
         //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity){
             Debug.Log("Blocked");
+            audioManager.GetComponent<RandomSons>().Block();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player" && velocityTracker.velocityr >= requiredVelocity){
             
-
+            audioManager.GetComponent<RandomSons>().Hit();
             infoPlayer2.life --;
 
             
@@ -51,11 +51,12 @@ public class CollisionJoueur : MonoBehaviour
          //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityl >= requiredVelocity){
             Debug.Log("Blocked");
+            audioManager.GetComponent<RandomSons>().Block();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player" && velocityTracker.velocityl >= requiredVelocity){
             
-
+            audioManager.GetComponent<RandomSons>().Hit();
             infoPlayer2.life --;
 
            
@@ -69,10 +70,12 @@ public class CollisionJoueur : MonoBehaviour
         //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity){
             Debug.Log("Blocked");
+            audioManager.GetComponent<RandomSons>().Block();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityr >= requiredVelocity){
             
+            audioManager.GetComponent<RandomSons>().Hit();
             infoPlayer1.life --;
 
            
@@ -85,11 +88,12 @@ public class CollisionJoueur : MonoBehaviour
          //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityl >= requiredVelocity){
             Debug.Log("Blocked");
+            audioManager.GetComponent<RandomSons>().Block();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityl >= requiredVelocity){
             
-
+            audioManager.GetComponent<RandomSons>().Hit();
             infoPlayer1.life --;
 
            
