@@ -90,16 +90,22 @@ public class NetworkPlayer : NetworkBehaviour
             Debug.Log("JOUER GROS");
             leftHand.localScale =  RigReferences.Singleton.leftHand.localScale;
             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+        }else if(infoPlayer1.power == false && rightHandTag.tag == "Glove1" && IsHost && IsOwner){
+            leftHand.localScale =  RigReferences.Singleton.leftHand.localScale;
+            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
         }
 
 
 
 
 
-        if(infoPlayer1.power == false && rightHandTag.tag == "Glove" && !IsHost && IsOwner){
+        if(infoPlayer2.power == true && rightHandTag.tag == "Glove" && !IsHost && IsOwner){
 
             Debug.Log("JOUER2 GROS");
             leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
+            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+        }else if(infoPlayer2.power == false && rightHandTag.tag == "Glove" && IsHost && IsOwner){
+            leftHand.localScale =  RigReferences.Singleton.leftHand.localScale;
             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
         }
 
