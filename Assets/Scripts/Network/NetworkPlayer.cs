@@ -6,6 +6,12 @@ using Unity.Netcode;
 public class NetworkPlayer : NetworkBehaviour
 {
 
+    [SerializeField]
+    private InfosPlayer infoPlayer1;
+
+    [SerializeField]
+    private InfosPlayer infoPlayer2;
+
     public Transform root;
     public Transform head;
     public Transform leftHand;
@@ -44,7 +50,7 @@ public class NetworkPlayer : NetworkBehaviour
         }
         else if(IsHost && IsOwner){
             headTag.tag = "Player1";
-             leftHandTag.tag = "Glove1";
+            leftHandTag.tag = "Glove1";
             rightHandTag.tag = "Glove1";
         }
 
@@ -68,12 +74,33 @@ public class NetworkPlayer : NetworkBehaviour
 
         leftHand.position = RigReferences.Singleton.leftHand.position;
         leftHand.rotation = RigReferences.Singleton.leftHand.rotation;
-        leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
+        
 
         RightHand.position = RigReferences.Singleton.RightHand.position;
         RightHand.rotation = RigReferences.Singleton.RightHand.rotation;
-        RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+       
 
+        
+
+        }
+
+
+
+        if(infoPlayer1.power == true && rightHandTag.tag == "Glove1" && IsHost && IsOwner){
+            Debug.Log("JOUER GROS");
+            leftHand.localScale =  RigReferences.Singleton.leftHand.localScale;
+            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+        }
+
+
+
+
+
+        if(infoPlayer1.power == false && rightHandTag.tag == "Glove" && !IsHost && IsOwner){
+
+            Debug.Log("JOUER2 GROS");
+            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
+            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
         }
 
         

@@ -606,6 +606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796fa93f989ca39458ae66cabdce2a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  infoPlayer1: {fileID: 11400000, guid: 77537efb8a17c0b44b9fe26f0850892b, type: 2}
+  infoPlayer2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
   root: {fileID: 5057237375956529921}
   head: {fileID: 7479447621484014408}
   leftHand: {fileID: 1753680342726738195}
