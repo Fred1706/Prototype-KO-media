@@ -68,9 +68,11 @@ public class NetworkPlayer : NetworkBehaviour
 
         leftHand.position = RigReferences.Singleton.leftHand.position;
         leftHand.rotation = RigReferences.Singleton.leftHand.rotation;
+        leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
 
         RightHand.position = RigReferences.Singleton.RightHand.position;
         RightHand.rotation = RigReferences.Singleton.RightHand.rotation;
+        RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
 
         }
 

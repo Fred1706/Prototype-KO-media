@@ -11,7 +11,7 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField]
     private GameObject _player1Body;
     [SerializeField]
-    private float powerUpTime = 10f;
+    private float powerUpTime = 4f;
     [SerializeField]
     private float powerUpSize = 1.5f;
     private int _playerIndex;
