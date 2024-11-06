@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
+   
+
     [SerializeField]
     private InfosPlayer _player1;
     [SerializeField]
@@ -35,6 +37,8 @@ public class PowerUpManager : MonoBehaviour
         {
             case 1:
                 Debug.Log("Power up large P1.");
+
+                
 
                 GameObject leftHand = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
                 leftHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);

@@ -286,7 +286,7 @@ MonoBehaviour:
   _player1: {fileID: 11400000, guid: 77537efb8a17c0b44b9fe26f0850892b, type: 2}
   _player2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
   _player1Body: {fileID: 1477974278}
-  powerUpTime: 10
+  powerUpTime: 4
   powerUpSize: 1.5
 --- !u!4 &100699818
 Transform:
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923599957}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1494b60ca8670e41a9860491fb699f4, type: 3}
   m_Name: 
@@ -3022,7 +3022,7 @@ Canvas:
   m_GameObject: {fileID: 1661837852}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 2048587781}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
