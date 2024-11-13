@@ -23,6 +23,6 @@ public class ButtonTimerShow : MonoBehaviour
         TimeSpan ts = TimeSpan.FromSeconds(time);
 
         // 00:00:00:000 (heures, minutes, secondes, millisecondes)
-        _buttonTimeText.text = string.Format("{0:00}:{1:00}:{2:00}:{3:000}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds);
+        _buttonTimeText.text = string.Format("{0:00}",ts.Seconds);
     }
 }

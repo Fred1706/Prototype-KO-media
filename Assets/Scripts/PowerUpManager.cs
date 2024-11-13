@@ -38,13 +38,13 @@ public class PowerUpManager : MonoBehaviour
             case 1:
                 Debug.Log("Power up large P1.");
 
-                
-
                 GameObject leftHand = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
                 leftHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
                 GameObject rightHand = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject;
                 rightHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
 
+
+                
                 StartCoroutine(PowerUpFinish(powerUpTime));
 
                 IEnumerator PowerUpFinish(float powerUpTime)
@@ -59,14 +59,38 @@ public class PowerUpManager : MonoBehaviour
                 rightHand.transform.localScale = new Vector3(1f, 1f, 1f);
                 leftHand.transform.localScale = new Vector3(1f, 1f, 1f);
 
+
                 Debug.Log("PowerUp finished.");
                 }
                 
             break;
             case 2:
                 Debug.Log("Power up large P2.");
+
+                GameObject leftHand2 = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
+                leftHand2.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
+                GameObject rightHand2 = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject;
+                rightHand2.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
+
+
+                
+                StartCoroutine(PowerUpFinish2(powerUpTime));
+
+                IEnumerator PowerUpFinish2(float powerUpTime)
+                {
+                //Wait for the specified delay time before continuing.
+                yield return new WaitForSeconds(powerUpTime);
+
+                //Do the action after the delay time has finished.
                 _player2.power = false;
                 _playerIndex = 0;
+
+                 rightHand2.transform.localScale = new Vector3(1f, 1f, 1f);
+                leftHand2.transform.localScale = new Vector3(1f, 1f, 1f);
+
+
+                Debug.Log("PowerUp2 finished.");
+                 }
             break;
         }
     }

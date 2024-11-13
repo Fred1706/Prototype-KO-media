@@ -19,6 +19,11 @@ public class NetworkConnect : MonoBehaviour
      private float heartBeatTimer;
 
      public GameObject XRorigin;
+     public GameObject lefthand;
+     public GameObject righthand;
+
+     public GameObject lefthandHost;
+     public GameObject righthandHost;
 
      /// <summary>
      /// Awake is called when the script instance is being loaded.
@@ -50,6 +55,7 @@ public class NetworkConnect : MonoBehaviour
           }
           catch{
                Create();
+               DifferentPositionHost();
           }
 
 
@@ -125,8 +131,22 @@ public class NetworkConnect : MonoBehaviour
 
         XRorigin.transform.rotation = Quaternion.Euler(0, 38, 0);
 
+          lefthand.SetActive(false);
+
+          righthand.SetActive(false);
+     
+
+    }
+
+    void DifferentPositionHost()
+    {
 
 
+       
+          lefthandHost.SetActive(false);
+          
+          righthandHost.SetActive(false);
+     
 
     }
 

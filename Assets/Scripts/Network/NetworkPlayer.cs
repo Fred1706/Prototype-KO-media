@@ -22,10 +22,23 @@ public class NetworkPlayer : NetworkBehaviour
     public GameObject rightHandTag;
     
 
+
+    public GameObject headplayer1;
+    public GameObject rightHandPlayer1;
+    public GameObject leftHandPlayer1;
+
+
+    public GameObject headplayer2;
+    public GameObject rightHandPlayer2;
+    public GameObject leftHandPlayer2;
+    
+
     
 
 
     public Renderer[] meshToDisable;
+
+    public GameObject[] headAppear;
     // Start is called before the first frame update
 
     public override void OnNetworkSpawn(){
@@ -47,11 +60,49 @@ public class NetworkPlayer : NetworkBehaviour
             headTag.tag = "Player";
             leftHandTag.tag = "Glove";
             rightHandTag.tag = "Glove";
+
+            headplayer1.SetActive(false);
+            leftHandPlayer1.SetActive(false);
+            rightHandPlayer1.SetActive(false);
+
+            headplayer2.layer = 3;
+            
+            
         }
-        else if(IsHost && IsOwner){
+        else if(!IsHost && !IsOwner){
+            headplayer2.SetActive(false);
+            leftHandPlayer2.SetActive(false);
+            rightHandPlayer2.SetActive(false);
+            headplayer1.layer = 6;
+
+             foreach(var item in headAppear)
+            {
+            item.layer = 6;
+            }
+        }
+
+
+
+
+
+        if(IsHost && IsOwner){
             headTag.tag = "Player1";
             leftHandTag.tag = "Glove1";
             rightHandTag.tag = "Glove1";
+
+            headplayer2.SetActive(false);
+            leftHandPlayer2.SetActive(false);
+            rightHandPlayer2.SetActive(false);
+            headplayer1.layer = 3;
+        }
+        
+        else if(IsHost && !IsOwner){
+
+
+            headplayer1.SetActive(false);
+            leftHandPlayer1.SetActive(false);
+            rightHandPlayer1.SetActive(false);
+            headplayer2.layer = 6;
         }
 
 
@@ -113,6 +164,10 @@ public class NetworkPlayer : NetworkBehaviour
 
         
     }
+
+
+
+    
 
 
 
