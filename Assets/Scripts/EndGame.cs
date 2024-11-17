@@ -32,7 +32,7 @@ public class EndGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(infosPlayer1.life == 0 || infosPlayer2.life == 0 || infosTime.Time == 0){
+        if(infosPlayer1.life <= 0 || infosPlayer2.life <= 0 || infosTime.Time <= 0){
             verifyVictory();
         }
        

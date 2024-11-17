@@ -66,7 +66,7 @@ public class NetworkConnect : MonoBehaviour
 
    public async void Create()
    {
-     Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnection);
+     Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnection, region: "northamerica-northeast1");
      string newJoinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
      
@@ -108,9 +108,9 @@ public class NetworkConnect : MonoBehaviour
 
    private void Update()
    {
-     if(heartBeatTimer > 15)
+     if(heartBeatTimer > 30)
      {
-          heartBeatTimer -= 15;
+          heartBeatTimer -= 30;
 
           if(currentLobby != null && currentLobby.HostId == AuthenticationService.Instance.PlayerId )
                LobbyService.Instance.SendHeartbeatPingAsync(currentLobby.Id);
