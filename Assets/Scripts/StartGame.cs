@@ -14,8 +14,6 @@ public class StartGame : MonoBehaviour
 
     public GameObject buttonManager;
 
-    [SerializeField]
-    private float timeUntilStart = 90f;
 
     // Start is called before the first frame update
     void Start()
@@ -46,14 +44,6 @@ public class StartGame : MonoBehaviour
         infosPlayer2.life = 5;
         infosTime.ready = 1;
 
-        StartCoroutine(StartTimerWait(timeUntilStart));
-
-            IEnumerator StartTimerWait(float timeUntilStart)
-            {
-            //Wait for the specified delay time before continuing.
-            yield return new WaitForSeconds(timeUntilStart);
-            buttonManager.GetComponent<ButtonInteraction>().StartTimer();
-            }
         
 
     }

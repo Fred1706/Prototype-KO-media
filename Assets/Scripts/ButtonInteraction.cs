@@ -25,6 +25,15 @@ public class ButtonInteraction : MonoBehaviour
     private InfosPlayer _player1;
     [SerializeField]
     private InfosPlayer _player2;
+    public InfosTime infosTime;
+    [SerializeField]
+    private float timeUntilStart = 90f;
+
+    void Update(){
+        if(infosTime.Time == timeUntilStart){
+            StartTimer();
+        }
+    }
 
     private void OnPressP1()
     {
