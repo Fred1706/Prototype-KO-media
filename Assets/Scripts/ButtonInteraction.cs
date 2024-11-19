@@ -12,8 +12,6 @@ public class ButtonInteraction : MonoBehaviour
     [SerializeField]
     private float buttonTime = 5f;
     [SerializeField]
-    private float timeUntilStart = 90f;
-    [SerializeField]
     private GameObject _buttonPlayerWinObject;
     [SerializeField]
     private GameObject _buttonWaitObject;
@@ -28,17 +26,6 @@ public class ButtonInteraction : MonoBehaviour
     [SerializeField]
     private InfosPlayer _player2;
 
-    void Start(){
-        StartCoroutine(StartTimerWait(timeUntilStart));
-
-            IEnumerator StartTimerWait(float timeUntilStart)
-            {
-            //Wait for the specified delay time before continuing.
-            yield return new WaitForSeconds(timeUntilStart);
-            StartTimer();
-            }
-    }
-
     private void OnPressP1()
     {
         player1Score++;
@@ -49,7 +36,7 @@ public class ButtonInteraction : MonoBehaviour
         player2Score++;
         Debug.Log("Player 2 : " + player2Score);
     }
-    private void StartTimer(){
+    public void StartTimer(){
         _buttonWaitObject.SetActive(true);
         StartCoroutine(ButtonTimerWait(buttonTime));
 

@@ -20,7 +20,7 @@ public class EndGame : MonoBehaviour
 
     public GameObject rightController; 
 
-
+    public GameObject sponsorImage;
 
 
     // Start is called before the first frame update
@@ -55,7 +55,7 @@ public class EndGame : MonoBehaviour
             canvasPlayer.SetActive(false);
             leftController.SetActive(false);
             rightController.SetActive(false);
-       
+            sponsorImage.SetActive(true);
 
     }
 
@@ -74,6 +74,7 @@ public class EndGame : MonoBehaviour
 
         canvasStart.SetActive(true);
         canvasEnd.SetActive(false);
+        sponsorImage.SetActive(false);
 
     }
 }
