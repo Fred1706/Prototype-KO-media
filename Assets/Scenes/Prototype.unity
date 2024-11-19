@@ -320,7 +320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &135512309
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4324,7 +4324,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _powerUpManager: {fileID: 100699816}
+  buttonTime: 5
+  timeUntilStart: 10
   _buttonPlayerWinObject: {fileID: 1873350099}
+  _buttonWaitObject: {fileID: 264111545}
+  _buttonGoObject: {fileID: 1648512032}
+  _buttonTimerUI: {fileID: 135512308}
   _buttonPlayerWinText: {fileID: 1873350101}
   _player1: {fileID: 11400000, guid: 77537efb8a17c0b44b9fe26f0850892b, type: 2}
   _player2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}

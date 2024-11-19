@@ -10,13 +10,34 @@ public class ButtonInteraction : MonoBehaviour
     [SerializeField]
     private GameObject _powerUpManager;
     [SerializeField]
+    private float buttonTime = 5f;
+    [SerializeField]
+    private float timeUntilStart = 90f;
+    [SerializeField]
     private GameObject _buttonPlayerWinObject;
+    [SerializeField]
+    private GameObject _buttonWaitObject;
+    [SerializeField]
+    private GameObject _buttonGoObject;
+    [SerializeField]
+    private GameObject _buttonTimerUI;
     [SerializeField]
     private TMP_Text _buttonPlayerWinText;
     [SerializeField]
     private InfosPlayer _player1;
     [SerializeField]
     private InfosPlayer _player2;
+
+    void Start(){
+        StartCoroutine(StartTimerWait(timeUntilStart));
+
+            IEnumerator StartTimerWait(float timeUntilStart)
+            {
+            //Wait for the specified delay time before continuing.
+            yield return new WaitForSeconds(timeUntilStart);
+            StartTimer();
+            }
+    }
 
     private void OnPressP1()
     {
@@ -28,11 +49,23 @@ public class ButtonInteraction : MonoBehaviour
         player2Score++;
         Debug.Log("Player 2 : " + player2Score);
     }
-    private void OnStartTimer(){
-        player1Score = 0;
-        player2Score = 0;
-        _buttonPlayerWinObject.SetActive(false);
-        gameObject.GetComponent<ButtonTimer>().StartTimer();
+    private void StartTimer(){
+        _buttonWaitObject.SetActive(true);
+        StartCoroutine(ButtonTimerWait(buttonTime));
+
+            IEnumerator ButtonTimerWait(float buttonTime)
+            {
+            //Wait for the specified delay time before continuing.
+            yield return new WaitForSeconds(buttonTime);
+            _buttonGoObject.SetActive(true);
+            _buttonWaitObject.SetActive(false);
+            _buttonTimerUI.SetActive(true);
+            player1Score = 0;
+            player2Score = 0;
+            _buttonPlayerWinObject.SetActive(false);
+            gameObject.GetComponent<ButtonTimer>().StartTimer();
+            }
+        
     }
     public void CompareScore(){
         if(player1Score > player2Score){
@@ -52,6 +85,16 @@ public class ButtonInteraction : MonoBehaviour
             _buttonPlayerWinObject.SetActive(true);
             _buttonPlayerWinText.text = "Draw!";
         }
+        _buttonGoObject.SetActive(false);
+        StartCoroutine(ScoreTimerWait(buttonTime));
+
+            IEnumerator ScoreTimerWait(float buttonTime)
+            {
+            //Wait for the specified delay time before continuing.
+            yield return new WaitForSeconds(buttonTime);
+            _buttonPlayerWinObject.SetActive(false);
+            _buttonTimerUI.SetActive(false);
+            }
         _powerUpManager.GetComponent<PowerUpManager>().PowerUpSelection();
     }
 
