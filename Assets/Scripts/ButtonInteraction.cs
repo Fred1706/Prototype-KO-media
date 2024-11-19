@@ -30,7 +30,7 @@ public class ButtonInteraction : MonoBehaviour
     private float timeUntilStart = 90f;
 
     void Update(){
-        if(infosTime.Time == timeUntilStart){
+        if(timeUntilStart - 1 <= infosTime.Time && infosTime.Time <= timeUntilStart){
             StartTimer();
         }
     }
