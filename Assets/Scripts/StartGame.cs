@@ -14,6 +14,8 @@ public class StartGame : MonoBehaviour
 
     public GameObject buttonManager;
 
+    public GameObject sponsorImage;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,7 @@ public class StartGame : MonoBehaviour
         canvasPlayer.SetActive(true);
 
         canvasStart.SetActive(false);
+        sponsorImage.SetActive(false);
 
         infosTime.Time = infosTime.StartTime; 
         infosPlayer1.life = 5;

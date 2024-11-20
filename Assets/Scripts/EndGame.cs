@@ -74,7 +74,7 @@ public class EndGame : MonoBehaviour
 
         canvasStart.SetActive(true);
         canvasEnd.SetActive(false);
-        sponsorImage.SetActive(false);
+        
 
     }
 }
