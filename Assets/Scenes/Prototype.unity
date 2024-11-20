@@ -3533,8 +3533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   root: {fileID: 1477974281}
   head: {fileID: 1578496662}
-  leftHand: {fileID: 1419782217}
-  RightHand: {fileID: 442749305}
+  leftHand: {fileID: 1188893538}
+  RightHand: {fileID: 1377896332}
 --- !u!143 &1477974283
 CharacterController:
   m_ObjectHideFlags: 0

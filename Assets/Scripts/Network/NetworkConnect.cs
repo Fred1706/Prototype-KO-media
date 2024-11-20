@@ -131,10 +131,14 @@ public class NetworkConnect : MonoBehaviour
 
         XRorigin.transform.rotation = Quaternion.Euler(0, 38, 0);
 
-          lefthand.SetActive(false);
+         // lefthand.SetActive(false);
 
-          righthand.SetActive(false);
+         // righthand.SetActive(false);
      
+
+          //lefthandHost.SetActive(true);
+          
+          //righthandHost.SetActive(true);
 
     }
 
@@ -143,9 +147,9 @@ public class NetworkConnect : MonoBehaviour
 
 
        
-          lefthandHost.SetActive(false);
+          //lefthandHost.SetActive(false);
           
-          righthandHost.SetActive(false);
+         // righthandHost.SetActive(false);
      
 
     }
