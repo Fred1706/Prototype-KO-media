@@ -1180,7 +1180,8 @@ MonoBehaviour:
   infosTime: {fileID: 11400000, guid: ad6dfaa06eb718d4188efa3965e3ebad, type: 2}
   infosPlayer1: {fileID: 11400000, guid: 77537efb8a17c0b44b9fe26f0850892b, type: 2}
   infosPlayer2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
-  buttonManager: {fileID: 0}
+  buttonManager: {fileID: 1754630640}
+  sponsorImage: {fileID: 1665927595}
 --- !u!114 &923599961
 MonoBehaviour:
   m_ObjectHideFlags: 0
