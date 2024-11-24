@@ -19,6 +19,11 @@ public class NetworkConnect : MonoBehaviour
      private float heartBeatTimer;
 
      public GameObject XRorigin;
+     public GameObject lefthand;
+     public GameObject righthand;
+
+     public GameObject lefthandHost;
+     public GameObject righthandHost;
 
      /// <summary>
      /// Awake is called when the script instance is being loaded.
@@ -50,6 +55,7 @@ public class NetworkConnect : MonoBehaviour
           }
           catch{
                Create();
+               DifferentPositionHost();
           }
 
 
@@ -60,7 +66,7 @@ public class NetworkConnect : MonoBehaviour
 
    public async void Create()
    {
-     Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnection);
+     Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnection, region: "northamerica-northeast1");
      string newJoinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
      
@@ -102,9 +108,9 @@ public class NetworkConnect : MonoBehaviour
 
    private void Update()
    {
-     if(heartBeatTimer > 15)
+     if(heartBeatTimer > 30)
      {
-          heartBeatTimer -= 15;
+          heartBeatTimer -= 30;
 
           if(currentLobby != null && currentLobby.HostId == AuthenticationService.Instance.PlayerId )
                LobbyService.Instance.SendHeartbeatPingAsync(currentLobby.Id);
@@ -125,8 +131,26 @@ public class NetworkConnect : MonoBehaviour
 
         XRorigin.transform.rotation = Quaternion.Euler(0, 38, 0);
 
+         // lefthand.SetActive(false);
+
+         // righthand.SetActive(false);
+     
+
+          //lefthandHost.SetActive(true);
+          
+          //righthandHost.SetActive(true);
+
+    }
+
+    void DifferentPositionHost()
+    {
 
 
+       
+          //lefthandHost.SetActive(false);
+          
+         // righthandHost.SetActive(false);
+     
 
     }
 

@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype.unity
     guid: ed3557ea2a3e98a4bbeaae20f209a11d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PowerUpTest.unity
     guid: 880ab2611a338af45b005e4c90228f5c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestCamera.unity
     guid: 352ed6fd07a641442a4d74c69ba221ef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test-Collision.unity
     guid: ebd10c2ce96565a4581b801dd6761cb8
   m_configObjects:
