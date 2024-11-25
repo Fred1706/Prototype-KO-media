@@ -16,6 +16,8 @@ public class StartGame : MonoBehaviour
 
     public GameObject sponsorImage;
 
+    public GameObject jumbotron;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,7 @@ public class StartGame : MonoBehaviour
     private void StartFight(){
 
         canvasPlayer.SetActive(true);
+        jumbotron.SetActive(true);
 
         canvasStart.SetActive(false);
         sponsorImage.SetActive(false);

@@ -22,6 +22,8 @@ public class EndGame : MonoBehaviour
 
     public GameObject sponsorImage;
 
+    public GameObject jumbotron;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,7 @@ public class EndGame : MonoBehaviour
 
             canvasEnd.SetActive(true);
             canvasPlayer.SetActive(false);
+            jumbotron.SetActive(false);
             leftController.SetActive(false);
             rightController.SetActive(false);
             sponsorImage.SetActive(true);
