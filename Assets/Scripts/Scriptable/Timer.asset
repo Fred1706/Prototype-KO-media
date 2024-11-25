@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4119870849cc909409a426a2a283cf96, type: 3}
   m_Name: Timer
   m_EditorClassIdentifier: 
-  Time: 119.93196
+  Time: 7
   StartTime: 120
   ready: 0

@@ -64,7 +64,7 @@ public class EndGame : MonoBehaviour
                 }
                 
                 if(infosPlayer1.life < infosPlayer2.life){
-                    TextVictory.text = "Joueur 1 à gagné";
+                    TextVictory.text = "Joueur 2 à gagné";
                 }
 
                 if(infosPlayer1.life == infosPlayer2.life){

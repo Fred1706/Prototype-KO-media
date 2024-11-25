@@ -29,6 +29,9 @@ public class ButtonInteraction : MonoBehaviour
     [SerializeField]
     private float timeUntilStart = 90f;
 
+
+    public PowerUpManager power;
+
     void Update(){
         if(timeUntilStart - 1 <= infosTime.Time && infosTime.Time <= timeUntilStart){
             StartTimer();
@@ -64,6 +67,11 @@ public class ButtonInteraction : MonoBehaviour
         
     }
     public void CompareScore(){
+
+        power.PowerUpLarge();
+
+
+
         if(player1Score > player2Score){
             Debug.Log("Player 1 wins!");
             _buttonPlayerWinObject.SetActive(true);

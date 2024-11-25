@@ -4997,6 +4997,7 @@ MonoBehaviour:
   _player2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
   infosTime: {fileID: 11400000, guid: ad6dfaa06eb718d4188efa3965e3ebad, type: 2}
   timeUntilStart: 90
+  power: {fileID: 100699817}
 --- !u!114 &1754630644
 MonoBehaviour:
   m_ObjectHideFlags: 0

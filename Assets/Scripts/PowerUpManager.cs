@@ -30,7 +30,7 @@ public class PowerUpManager : MonoBehaviour
         PowerUpLarge();
     }
     
-    private void PowerUpLarge(){
+    public void PowerUpLarge(){
 
         //Les switch cases fonctionnent comme des if, on verifie c'est quoi la valeur du player index et selon sa valeur on execute le code.
         switch (_playerIndex)
@@ -94,4 +94,8 @@ public class PowerUpManager : MonoBehaviour
             break;
         }
     }
+
+
+
+   
 }
