@@ -34,7 +34,6 @@ public class NetworkPlayer : NetworkBehaviour
     public GameObject leftHandPlayer2;
     
 
-    
 
 
     public Renderer[] meshToDisable;
@@ -141,8 +140,8 @@ public class NetworkPlayer : NetworkBehaviour
 
         if(infoPlayer1.power == true && rightHandTag.tag == "Glove1" && IsHost && IsOwner){
             
-            leftHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
-            RightHand.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
         }else{
             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
             leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
@@ -155,8 +154,8 @@ public class NetworkPlayer : NetworkBehaviour
         if(infoPlayer2.power == true && rightHandTag.tag == "Glove" && !IsHost && IsOwner){
 
            
-            leftHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
-            RightHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
+             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
         }else{
             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
             leftHand.localScale = RigReferences.Singleton.leftHand.localScale;

@@ -15,13 +15,13 @@ public class PowerUpNew : MonoBehaviour
 
         if(infosPlayer1.power == true || infosPlayer2.power == true){
 
-            //leftHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            leftHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
 
-            //rightHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            rightHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }else{
-            //leftHand.transform.localScale = new Vector3(1, 1, 1);
+            leftHand.transform.localScale = new Vector3(1, 1, 1);
 
-           // rightHand.transform.localScale = new Vector3(1, 1, 1);
+            rightHand.transform.localScale = new Vector3(1, 1, 1);
         }
 
 
