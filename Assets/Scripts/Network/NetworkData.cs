@@ -66,7 +66,7 @@ public void UpdateGameDataServerRpc(int newLife1, int newLife2, float newTime, i
 private void UpdateClientsWithGameData()
 {
     // Envoyer les données du ScriptableObject aux clients via un ClientRpc
-    UpdateGameDataClientRpc(infoPlayer1.life, infoPlayer2.life, timer.Time, timer.ready, infoPlayer1.power, infoPlayer1.power);
+    UpdateGameDataClientRpc(infoPlayer1.life, infoPlayer2.life, timer.Time, timer.ready, infoPlayer1.power, infoPlayer2.power);
 }
 
 [ClientRpc]
