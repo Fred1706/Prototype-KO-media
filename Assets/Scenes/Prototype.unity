@@ -4986,6 +4986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12e01b6c16e1b7498d15be9d47e2705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftHand: {fileID: 1188893537}
+  rightHand: {fileID: 1377896331}
   _powerUpManager: {fileID: 100699816}
   buttonTime: 5
   _buttonPlayerWinObject: {fileID: 1873350099}
