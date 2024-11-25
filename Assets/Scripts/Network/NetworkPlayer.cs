@@ -140,7 +140,7 @@ public class NetworkPlayer : NetworkBehaviour
 
 
         if(infoPlayer1.power == true && rightHandTag.tag == "Glove1" && IsHost && IsOwner){
-            Debug.Log("JOUER GROS");
+            
             leftHand.localScale =  RigReferences.Singleton.leftHand.localScale;
             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
         }
@@ -151,7 +151,7 @@ public class NetworkPlayer : NetworkBehaviour
 
         if(infoPlayer2.power == true && rightHandTag.tag == "Glove" && !IsHost && IsOwner){
 
-           Debug.Log("JOUER2 GROS");
+           
             leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
         }

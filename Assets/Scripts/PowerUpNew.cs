@@ -18,6 +18,10 @@ public class PowerUpNew : MonoBehaviour
             leftHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
 
             rightHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        }else{
+            leftHand.transform.localScale = new Vector3(1, 1, 1);
+
+            rightHand.transform.localScale = new Vector3(1, 1, 1);
         }
 
 
