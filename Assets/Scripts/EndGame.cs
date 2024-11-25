@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EndGame : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class EndGame : MonoBehaviour
 
     public GameObject jumbotron;
 
+    public TMP_Text TextVictory;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +48,34 @@ public class EndGame : MonoBehaviour
 
     public void verifyVictory(){
 
+            if(infosPlayer1.life <= 0){
+                TextVictory.text = "Le joueur 2 à gagné";
+            }
+
+            if(infosPlayer2.life <= 0){
+                TextVictory.text = "Le joueur 1 à gagné";
+            }
+
+            if(infosTime.Time <= 0){
+
+
+                if(infosPlayer1.life > infosPlayer2.life){
+                    TextVictory.text = "Joueur 1 à gagné";
+                }
+                
+                if(infosPlayer1.life < infosPlayer2.life){
+                    TextVictory.text = "Joueur 1 à gagné";
+                }
+
+                if(infosPlayer1.life == infosPlayer2.life){
+                    TextVictory.text = "Égalité";
+                }
+
+                
+            }
+
          
-            Debug.Log("partie terminer");
+            
 
             infosTime.Time = infosTime.StartTime;
             
