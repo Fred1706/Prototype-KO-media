@@ -68,8 +68,7 @@ public class ButtonInteraction : MonoBehaviour
     }
     public void CompareScore(){
 
-        power.PowerUpSelection();
-        power.PowerUpLarge();
+        
 
 
 
@@ -78,17 +77,26 @@ public class ButtonInteraction : MonoBehaviour
             _buttonPlayerWinObject.SetActive(true);
             _player1.power = true;
             _buttonPlayerWinText.text = "Player 1 Wins!";
+
+            power.PowerUpSelection();
+            power.PowerUpLarge();
         }
         else if(player1Score < player2Score){
             Debug.Log("Player 2 wins!");
             _buttonPlayerWinObject.SetActive(true);
             _player2.power = true;
             _buttonPlayerWinText.text = "Player 2 Wins!";
+
+            power.PowerUpSelection();
+            power.PowerUpLarge();
         }
         else{
             Debug.Log("Draw!");
             _buttonPlayerWinObject.SetActive(true);
             _buttonPlayerWinText.text = "Draw!";
+
+             power.PowerUpSelection();
+            power.PowerUpLarge();
         }
         _buttonGoObject.SetActive(false);
         StartCoroutine(ScoreTimerWait(buttonTime));
