@@ -32,6 +32,8 @@ public class PowerUpManager : MonoBehaviour
     
     public void PowerUpLarge(){
 
+         Debug.Log("Power up script jaine mon bb");
+
         //Les switch cases fonctionnent comme des if, on verifie c'est quoi la valeur du player index et selon sa valeur on execute le code.
         switch (_playerIndex)
         {
@@ -42,7 +44,7 @@ public class PowerUpManager : MonoBehaviour
                 leftHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
                 GameObject rightHand = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject;
                 rightHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
-
+                
 
                 
                 StartCoroutine(PowerUpFinish(powerUpTime));
