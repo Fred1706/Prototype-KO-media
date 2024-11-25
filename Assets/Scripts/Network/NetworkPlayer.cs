@@ -143,6 +143,9 @@ public class NetworkPlayer : NetworkBehaviour
             
             leftHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
             RightHand.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        }else{
+            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
         }
 
 
@@ -154,6 +157,9 @@ public class NetworkPlayer : NetworkBehaviour
            
             leftHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
             RightHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
+        }else{
+            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
         }
 
         
