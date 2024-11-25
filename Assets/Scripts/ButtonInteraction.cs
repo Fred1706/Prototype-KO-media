@@ -68,6 +68,7 @@ public class ButtonInteraction : MonoBehaviour
     }
     public void CompareScore(){
 
+        power.PowerUpSelection();
         power.PowerUpLarge();
 
 
