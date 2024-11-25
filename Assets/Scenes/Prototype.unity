@@ -264,6 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100699818}
   - component: {fileID: 100699817}
+  - component: {fileID: 100699819}
   m_Layer: 0
   m_Name: PowerUpManager
   m_TagString: Untagged
@@ -303,6 +304,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &100699819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100699816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972ecc7f878126643914acbdd8e12b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infosPlayer1: {fileID: 11400000, guid: 77537efb8a17c0b44b9fe26f0850892b, type: 2}
+  infosPlayer2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
+  leftHand: {fileID: 1188893537}
+  rightHand: {fileID: 1377896331}
 --- !u!1 &123693454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4986,8 +5003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12e01b6c16e1b7498d15be9d47e2705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHand: {fileID: 1188893537}
-  rightHand: {fileID: 1377896331}
   _powerUpManager: {fileID: 100699816}
   buttonTime: 5
   _buttonPlayerWinObject: {fileID: 1873350099}

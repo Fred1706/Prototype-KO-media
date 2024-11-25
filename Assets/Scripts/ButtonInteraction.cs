@@ -5,8 +5,7 @@ using TMPro;
 
 public class ButtonInteraction : MonoBehaviour
 {
-    public GameObject leftHand;
-    public GameObject rightHand;
+   
 
 
     private int player1Score = 0;
@@ -82,7 +81,7 @@ public class ButtonInteraction : MonoBehaviour
             _player1.power = true;
             _buttonPlayerWinText.text = "Player 1 Wins!";
 
-            VerifyPower();
+            
         }
         else if(player1Score < player2Score){
             Debug.Log("Player 2 wins!");
@@ -90,14 +89,14 @@ public class ButtonInteraction : MonoBehaviour
             _player2.power = true;
             _buttonPlayerWinText.text = "Player 2 Wins!";
 
-            VerifyPower();
+            
         }
         else{
             Debug.Log("Draw!");
             _buttonPlayerWinObject.SetActive(true);
             _buttonPlayerWinText.text = "Draw!";
 
-            VerifyPower();
+            
         }
         _buttonGoObject.SetActive(false);
         StartCoroutine(ScoreTimerWait(buttonTime));
@@ -113,15 +112,6 @@ public class ButtonInteraction : MonoBehaviour
     }
 
 
-    void VerifyPower(){
-
-        if(_player2.power == true || _player1.power == true){
-
-            leftHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-
-            rightHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-        }
-
-    }
+   
 
 }
