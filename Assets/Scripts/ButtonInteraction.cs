@@ -5,6 +5,10 @@ using TMPro;
 
 public class ButtonInteraction : MonoBehaviour
 {
+    public GameObject leftHand;
+    public GameObject rightHand;
+
+
     private int player1Score = 0;
     private int player2Score = 0;
     [SerializeField]
@@ -78,8 +82,7 @@ public class ButtonInteraction : MonoBehaviour
             _player1.power = true;
             _buttonPlayerWinText.text = "Player 1 Wins!";
 
-            power.PowerUpSelection();
-            power.PowerUpLarge();
+            VerifyPower();
         }
         else if(player1Score < player2Score){
             Debug.Log("Player 2 wins!");
@@ -87,16 +90,14 @@ public class ButtonInteraction : MonoBehaviour
             _player2.power = true;
             _buttonPlayerWinText.text = "Player 2 Wins!";
 
-            power.PowerUpSelection();
-            power.PowerUpLarge();
+            VerifyPower();
         }
         else{
             Debug.Log("Draw!");
             _buttonPlayerWinObject.SetActive(true);
             _buttonPlayerWinText.text = "Draw!";
 
-             power.PowerUpSelection();
-            power.PowerUpLarge();
+            VerifyPower();
         }
         _buttonGoObject.SetActive(false);
         StartCoroutine(ScoreTimerWait(buttonTime));
@@ -109,6 +110,18 @@ public class ButtonInteraction : MonoBehaviour
             _buttonTimerUI.SetActive(false);
             }
         _powerUpManager.GetComponent<PowerUpManager>().PowerUpSelection();
+    }
+
+
+    void VerifyPower(){
+
+        if(_player2.power == true || _player1.power == true){
+
+            leftHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+
+            rightHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        }
+
     }
 
 }
