@@ -30,7 +30,7 @@ public class NetworkData : NetworkBehaviour
 public void SendDataToServer(int newLife1, int newLife2, float newTime, int newReady, bool power1, bool power2)
 {
     // Appel de la méthode ServerRpc pour envoyer les données du client vers le serveur
-    UpdateGameDataFromClientServerRpc(newLife1, newLife2, newTime, newReady, bool power1, bool power2);
+    UpdateGameDataFromClientServerRpc(newLife1, newLife2, newTime, newReady, power1, power2);
 }
 
 [ServerRpc(RequireOwnership = false)]
