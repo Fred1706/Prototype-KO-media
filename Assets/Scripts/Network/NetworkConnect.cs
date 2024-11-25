@@ -55,7 +55,7 @@ public class NetworkConnect : MonoBehaviour
           }
           catch{
                Create();
-               DifferentPositionHost();
+              
           }
 
 
@@ -131,25 +131,15 @@ public class NetworkConnect : MonoBehaviour
 
         XRorigin.transform.rotation = Quaternion.Euler(0, 38, 0);
 
-         // lefthand.SetActive(false);
-
-         // righthand.SetActive(false);
-     
-
-          //lefthandHost.SetActive(true);
-          
-          //righthandHost.SetActive(true);
-
+        
     }
 
-    void DifferentPositionHost()
+    public void DifferentPositionEnd()
     {
 
 
-       
-          //lefthandHost.SetActive(false);
-          
-         // righthandHost.SetActive(false);
+       //test
+         
      
 
     }

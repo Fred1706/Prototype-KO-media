@@ -16,6 +16,7 @@ public class NetworkPlayer : NetworkBehaviour
     public Transform head;
     public Transform leftHand;
     public Transform RightHand;
+    
 
     public GameObject headTag;
     public GameObject leftHandTag;
@@ -122,6 +123,7 @@ public class NetworkPlayer : NetworkBehaviour
 
         head.position = RigReferences.Singleton.head.position;
         head.rotation = RigReferences.Singleton.head.rotation;
+
 
         leftHand.position = RigReferences.Singleton.leftHand.position;
         leftHand.rotation = RigReferences.Singleton.leftHand.rotation;
