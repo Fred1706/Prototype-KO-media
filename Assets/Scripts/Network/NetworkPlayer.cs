@@ -143,8 +143,7 @@ public class NetworkPlayer : NetworkBehaviour
              RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
             leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
         }else{
-            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
-            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
+            
         }
 
 
@@ -157,8 +156,7 @@ public class NetworkPlayer : NetworkBehaviour
              RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
             leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
         }else{
-            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
-            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
+            
         }
 
         
