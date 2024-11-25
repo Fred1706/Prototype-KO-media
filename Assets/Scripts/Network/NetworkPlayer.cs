@@ -141,8 +141,8 @@ public class NetworkPlayer : NetworkBehaviour
 
         if(infoPlayer1.power == true && rightHandTag.tag == "Glove1" && IsHost && IsOwner){
             
-            leftHand.localScale =  RigReferences.Singleton.leftHand.localScale;
-            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+            leftHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
+            RightHand.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
 
 
@@ -152,8 +152,8 @@ public class NetworkPlayer : NetworkBehaviour
         if(infoPlayer2.power == true && rightHandTag.tag == "Glove" && !IsHost && IsOwner){
 
            
-            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
-            RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+            leftHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
+            RightHand.localScale =  new Vector3(1.5f, 1.5f, 1.5f);
         }
 
         
