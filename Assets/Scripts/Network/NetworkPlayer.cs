@@ -140,7 +140,7 @@ public class NetworkPlayer : NetworkBehaviour
 
 
 
-        if(infoPlayer1.power == true && IsHost && IsOwner){
+        if(infoPlayer1.power == true && IsHost){
 
                 infoPlayer1.powerLocal = true;
              
