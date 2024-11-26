@@ -11,6 +11,7 @@ public class InfosPlayer : ScriptableObject
     public int life;
 
     public bool power;
+    public bool powerLocal;
 
    
 
@@ -19,5 +20,6 @@ public class InfosPlayer : ScriptableObject
         
         life = 5;
         power = false;
+        powerLocal = false;
     }
 }

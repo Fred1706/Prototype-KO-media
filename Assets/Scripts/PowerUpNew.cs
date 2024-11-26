@@ -13,7 +13,7 @@ public class PowerUpNew : MonoBehaviour
     void Update()
     {
 
-        if(infosPlayer1.power == true || infosPlayer2.power == true){
+        if(infosPlayer1.powerLocal == true || infosPlayer2.powerLocal == true){
 
             leftHand.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
 

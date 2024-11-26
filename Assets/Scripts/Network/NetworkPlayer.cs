@@ -33,7 +33,8 @@ public class NetworkPlayer : NetworkBehaviour
     public GameObject rightHandPlayer2;
     public GameObject leftHandPlayer2;
     
-
+    public GameObject leftHandxr;
+    public GameObject rightHandxr;
 
 
     public Renderer[] meshToDisable;
@@ -131,7 +132,8 @@ public class NetworkPlayer : NetworkBehaviour
         RightHand.position = RigReferences.Singleton.RightHand.position;
         RightHand.rotation = RigReferences.Singleton.RightHand.rotation;
        
-       
+        RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
+        leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
         
 
         }
@@ -139,11 +141,12 @@ public class NetworkPlayer : NetworkBehaviour
 
 
         if(infoPlayer1.power == true && rightHandTag.tag == "Glove1" && IsHost && IsOwner){
-            
-             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
-            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
+
+                infoPlayer1.powerLocal = true;
+             
         }else{
             
+                infoPlayer1.powerLocal = false;
         }
 
 
@@ -152,11 +155,10 @@ public class NetworkPlayer : NetworkBehaviour
 
         if(infoPlayer2.power == true && rightHandTag.tag == "Glove" && !IsHost && IsOwner){
 
-           
-             RightHand.localScale = RigReferences.Singleton.RightHand.localScale;
-            leftHand.localScale = RigReferences.Singleton.leftHand.localScale;
+            infoPlayer2.powerLocal = true;
+             
         }else{
-            
+            infoPlayer2.powerLocal = false;
         }
 
         
