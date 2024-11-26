@@ -140,7 +140,7 @@ public class NetworkPlayer : NetworkBehaviour
 
 
 
-        if(infoPlayer1.power == true && rightHandTag.tag == "Glove1" && IsHost && IsOwner){
+        if(infoPlayer1.power == true && IsHost && IsOwner){
 
                 infoPlayer1.powerLocal = true;
              
