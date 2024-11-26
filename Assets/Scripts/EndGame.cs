@@ -80,7 +80,7 @@ public class EndGame : MonoBehaviour
             infosTime.Time = infosTime.StartTime;
             
 
-            Invoke("ResetGame", 5.0f);
+            Invoke("ResetGame", 7.0f);
 
             canvasEnd.SetActive(true);
             canvasPlayer.SetActive(false);

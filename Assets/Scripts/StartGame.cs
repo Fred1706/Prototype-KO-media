@@ -31,7 +31,7 @@ public class StartGame : MonoBehaviour
         if(infosTime.ready == 2)
         {
 
-            Invoke("StartFight", 1.0f);
+            Invoke("StartFight", 0.5f);
 
         }
     }
