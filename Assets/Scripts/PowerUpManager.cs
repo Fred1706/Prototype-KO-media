@@ -30,7 +30,9 @@ public class PowerUpManager : MonoBehaviour
         PowerUpLarge();
     }
     
-    private void PowerUpLarge(){
+    public void PowerUpLarge(){
+
+         Debug.Log("Power up script jaine mon bb");
 
         //Les switch cases fonctionnent comme des if, on verifie c'est quoi la valeur du player index et selon sa valeur on execute le code.
         switch (_playerIndex)
@@ -38,11 +40,11 @@ public class PowerUpManager : MonoBehaviour
             case 1:
                 Debug.Log("Power up large P1.");
 
-                GameObject leftHand = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
-                leftHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
-                GameObject rightHand = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject;
-                rightHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
-
+                //GameObject leftHand = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
+                //leftHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
+                //GameObject rightHand = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject;
+                //rightHand.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
+                
 
                 
                 StartCoroutine(PowerUpFinish(powerUpTime));
@@ -56,8 +58,8 @@ public class PowerUpManager : MonoBehaviour
                 _player1.power = false;
                 _playerIndex = 0;
 
-                rightHand.transform.localScale = new Vector3(1f, 1f, 1f);
-                leftHand.transform.localScale = new Vector3(1f, 1f, 1f);
+                //rightHand.transform.localScale = new Vector3(1f, 1f, 1f);
+                //leftHand.transform.localScale = new Vector3(1f, 1f, 1f);
 
 
                 Debug.Log("PowerUp finished.");
@@ -67,10 +69,10 @@ public class PowerUpManager : MonoBehaviour
             case 2:
                 Debug.Log("Power up large P2.");
 
-                GameObject leftHand2 = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
-                leftHand2.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
-                GameObject rightHand2 = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject;
-                rightHand2.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
+                //GameObject leftHand2 = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
+                //leftHand2.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
+                //GameObject rightHand2 = _player1Body.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject;
+                //rightHand2.transform.localScale = new Vector3(powerUpSize, powerUpSize, powerUpSize);
 
 
                 
@@ -85,8 +87,8 @@ public class PowerUpManager : MonoBehaviour
                 _player2.power = false;
                 _playerIndex = 0;
 
-                 rightHand2.transform.localScale = new Vector3(1f, 1f, 1f);
-                leftHand2.transform.localScale = new Vector3(1f, 1f, 1f);
+                 //rightHand2.transform.localScale = new Vector3(1f, 1f, 1f);
+                //leftHand2.transform.localScale = new Vector3(1f, 1f, 1f);
 
 
                 Debug.Log("PowerUp2 finished.");
@@ -94,4 +96,8 @@ public class PowerUpManager : MonoBehaviour
             break;
         }
     }
+
+
+
+   
 }

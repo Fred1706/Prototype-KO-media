@@ -5,6 +5,9 @@ using TMPro;
 
 public class ButtonInteraction : MonoBehaviour
 {
+   
+
+
     private int player1Score = 0;
     private int player2Score = 0;
     [SerializeField]
@@ -28,6 +31,9 @@ public class ButtonInteraction : MonoBehaviour
     public InfosTime infosTime;
     [SerializeField]
     private float timeUntilStart = 90f;
+
+
+    public PowerUpManager power;
 
     void Update(){
         if(timeUntilStart - 1 <= infosTime.Time && infosTime.Time <= timeUntilStart){
@@ -64,22 +70,33 @@ public class ButtonInteraction : MonoBehaviour
         
     }
     public void CompareScore(){
+
+        
+
+
+
         if(player1Score > player2Score){
             Debug.Log("Player 1 wins!");
             _buttonPlayerWinObject.SetActive(true);
             _player1.power = true;
             _buttonPlayerWinText.text = "Player 1 Wins!";
+
+            
         }
         else if(player1Score < player2Score){
             Debug.Log("Player 2 wins!");
             _buttonPlayerWinObject.SetActive(true);
             _player2.power = true;
             _buttonPlayerWinText.text = "Player 2 Wins!";
+
+            
         }
         else{
             Debug.Log("Draw!");
             _buttonPlayerWinObject.SetActive(true);
             _buttonPlayerWinText.text = "Draw!";
+
+            
         }
         _buttonGoObject.SetActive(false);
         StartCoroutine(ScoreTimerWait(buttonTime));
@@ -93,5 +110,8 @@ public class ButtonInteraction : MonoBehaviour
             }
         _powerUpManager.GetComponent<PowerUpManager>().PowerUpSelection();
     }
+
+
+   
 
 }
