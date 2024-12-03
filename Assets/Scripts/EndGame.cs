@@ -98,7 +98,7 @@ public class EndGame : MonoBehaviour
 
                 if(infosPlayer1.life == infosPlayer2.life){
                     TextVictory.text = "Égalité";
-                    TextVictoryJumbo.text = "Égalité";
+                    
                 }
 
                 
@@ -120,7 +120,7 @@ public class EndGame : MonoBehaviour
             jumbotron.SetActive(false);
             leftController.SetActive(false);
             rightController.SetActive(false);
-            CanvasEndJumbotron.SetActive(false);
+            
             sponsorImage.SetActive(false);
 
             
@@ -131,7 +131,7 @@ public class EndGame : MonoBehaviour
 
     private void ResetGame(){
 
-        sponsorIndex = Random.Range(0, 5);
+        
 
         infosTime.ready = 0;
 
