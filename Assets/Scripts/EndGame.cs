@@ -69,6 +69,8 @@ public class EndGame : MonoBehaviour
 
     public void verifyVictory(){
 
+        Debug.Log('victo')
+
 
         CanvasEndJumbotron.SetActive(true);
 
