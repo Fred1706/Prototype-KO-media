@@ -69,6 +69,7 @@ public class EndGame : MonoBehaviour
 
     public void verifyVictory(){
 
+
         CanvasEndJumbotron.SetActive(true);
 
             if(infosPlayer1.life <= 0){
@@ -141,6 +142,7 @@ public class EndGame : MonoBehaviour
 
         canvasStart.SetActive(true);
         canvasStart.GetComponent<RandomMusic>().music();
+        Debug.Log("reset");
         canvasEnd.SetActive(false);
         
 
