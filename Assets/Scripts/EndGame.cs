@@ -108,7 +108,7 @@ public class EndGame : MonoBehaviour
         rightController.SetActive(true);
 
         canvasStart.SetActive(true);
-        audioManager.GetComponent<RandomMusic>().music();
+        //audioManager.GetComponent<RandomMusic>().music();
         canvasEnd.SetActive(false);
         
 
