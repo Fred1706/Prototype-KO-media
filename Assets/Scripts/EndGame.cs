@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class EndGame : MonoBehaviour
@@ -21,12 +22,18 @@ public class EndGame : MonoBehaviour
 
     public GameObject rightController; 
 
+    public GameObject CanvasEndJumbotron;
+
     public GameObject sponsorImage;
 
     public GameObject jumbotron;
 
     public TMP_Text TextVictory;
+    public TMP_Text TextVictoryJumbo;
 
+    public Texture[] sponsorTexture;
+
+    private int sponsorIndex = 1;
 
 
 
@@ -62,38 +69,51 @@ public class EndGame : MonoBehaviour
 
     public void verifyVictory(){
 
+        CanvasEndJumbotron.SetActive(true);
+
             if(infosPlayer1.life <= 0){
+
                 TextVictory.text = "Bob à gagné";
             }
 
             if(infosPlayer2.life <= 0){
                 TextVictory.text = "Lil Joe à gagné";
+
+             
+
             }
 
             if(infosTime.Time <= 0){
 
 
                 if(infosPlayer1.life > infosPlayer2.life){
+
                     TextVictory.text = "Lil Joe à gagné";
                 }
                 
                 if(infosPlayer1.life < infosPlayer2.life){
                     TextVictory.text = "Bob à gagné";
+
+             
+             
+
                 }
 
                 if(infosPlayer1.life == infosPlayer2.life){
                     TextVictory.text = "Égalité";
+                    TextVictoryJumbo.text = "Égalité";
                 }
 
                 
             }
 
-         
+
             
             infosPlayer1.life = 5;
             infosPlayer2.life = 5;
             infosTime.Time = infosTime.StartTime;
             
+            Invoke("SponsorShow", 2.0f);
 
             Invoke("ResetGame", 7.0f);
             Debug.Log("reset");
@@ -103,14 +123,18 @@ public class EndGame : MonoBehaviour
             jumbotron.SetActive(false);
             leftController.SetActive(false);
             rightController.SetActive(false);
-            sponsorImage.SetActive(true);
+            CanvasEndJumbotron.SetActive(false);
+            sponsorImage.SetActive(false);
 
+            
     }
 
 
 
 
     private void ResetGame(){
+
+        sponsorIndex = Random.Range(0, 5);
 
         infosTime.ready = 0;
 
@@ -126,5 +150,10 @@ public class EndGame : MonoBehaviour
         canvasEnd.SetActive(false);
         
 
+    }
+
+    private void SponsorShow(){
+        sponsorImage.GetComponent<RawImage>().texture = sponsorTexture[sponsorIndex];
+        sponsorImage.SetActive(true);
     }
 }
