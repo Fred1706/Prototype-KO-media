@@ -7,6 +7,8 @@ public class RandomSons : MonoBehaviour
      public AudioSource audioSource;
     [SerializeField]  private AudioClip[] sonsHit;
     [SerializeField]  private AudioClip[] sonsBlock;
+    [SerializeField]  private AudioClip[] SonPowerUp;
+
     
     
 
@@ -38,5 +40,10 @@ public class RandomSons : MonoBehaviour
        activeSound = sonsBlock[Random.Range(0, sonsBlock.Length)];
         audioSource.PlayOneShot(activeSound);
 
+    }
+
+    public void PowerUp(){
+        activeSound = SonPowerUp[Random.Range(0, SonPowerUp.Length)];
+        audioSource.PlayOneShot(activeSound);
     }
 }

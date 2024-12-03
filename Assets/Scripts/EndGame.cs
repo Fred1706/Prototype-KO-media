@@ -35,6 +35,20 @@ public class EndGame : MonoBehaviour
 
     private int sponsorIndex = 1;
 
+
+
+
+
+
+
+
+
+    
+
+    [SerializeField]
+    private GameObject audioManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,28 +72,31 @@ public class EndGame : MonoBehaviour
         CanvasEndJumbotron.SetActive(true);
 
             if(infosPlayer1.life <= 0){
-                TextVictory.text = "Le joueur 2 à gagné";
-                infosPlayer1.life = 5;
-                infosPlayer2.life = 5;
+
+                TextVictory.text = "Bob à gagné";
             }
 
             if(infosPlayer2.life <= 0){
-                TextVictory.text = "Le joueur 1 à gagné";
-                infosPlayer1.life = 5;
-                infosPlayer2.life = 5;
+                TextVictory.text = "Lil Joe à gagné";
+
+             
+
             }
 
             if(infosTime.Time <= 0){
 
 
                 if(infosPlayer1.life > infosPlayer2.life){
-                    TextVictory.text = "Joueur 1 à gagné";
-                    TextVictoryJumbo.text = "Joueur 1 à gagné";
+
+                    TextVictory.text = "Lil Joe à gagné";
                 }
                 
                 if(infosPlayer1.life < infosPlayer2.life){
-                    TextVictory.text = "Joueur 2 à gagné";
-                    TextVictoryJumbo.text = "Joueur 2 à gagné";
+                    TextVictory.text = "Bob à gagné";
+
+             
+             
+
                 }
 
                 if(infosPlayer1.life == infosPlayer2.life){
@@ -92,12 +109,14 @@ public class EndGame : MonoBehaviour
 
 
             
-
+            infosPlayer1.life = 5;
+            infosPlayer2.life = 5;
             infosTime.Time = infosTime.StartTime;
             
             Invoke("SponsorShow", 2.0f);
 
             Invoke("ResetGame", 7.0f);
+            Debug.Log("reset");
 
             canvasEnd.SetActive(true);
             canvasPlayer.SetActive(false);
@@ -126,6 +145,8 @@ public class EndGame : MonoBehaviour
         rightController.SetActive(true);
 
         canvasStart.SetActive(true);
+        audioManager.GetComponent<RandomMusic>().music();
+        Debug.Log("musique");
         canvasEnd.SetActive(false);
         
 
