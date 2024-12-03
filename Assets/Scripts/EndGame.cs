@@ -35,6 +35,20 @@ public class EndGame : MonoBehaviour
 
     private int sponsorIndex = 1;
 
+
+
+
+
+
+
+
+
+    
+
+    [SerializeField]
+    private GameObject audioManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -97,6 +111,7 @@ public class EndGame : MonoBehaviour
             Invoke("SponsorShow", 2.0f);
 
             Invoke("ResetGame", 7.0f);
+            Debug.Log("reset");
 
             canvasEnd.SetActive(true);
             canvasPlayer.SetActive(false);
