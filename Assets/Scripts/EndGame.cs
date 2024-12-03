@@ -27,6 +27,9 @@ public class EndGame : MonoBehaviour
 
     public TMP_Text TextVictory;
 
+    [SerializeField]
+    private GameObject audioManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -105,6 +108,7 @@ public class EndGame : MonoBehaviour
         rightController.SetActive(true);
 
         canvasStart.SetActive(true);
+        audioManager.GetComponent<RandomMusic>().music();
         canvasEnd.SetActive(false);
         
 
