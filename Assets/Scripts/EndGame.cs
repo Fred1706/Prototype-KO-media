@@ -52,22 +52,22 @@ public class EndGame : MonoBehaviour
     public void verifyVictory(){
 
             if(infosPlayer1.life <= 0){
-                TextVictory.text = "Le joueur 2 à gagné";
+                TextVictory.text = "Bob à gagné";
             }
 
             if(infosPlayer2.life <= 0){
-                TextVictory.text = "Le joueur 1 à gagné";
+                TextVictory.text = "Lil Joe à gagné";
             }
 
             if(infosTime.Time <= 0){
 
 
                 if(infosPlayer1.life > infosPlayer2.life){
-                    TextVictory.text = "Joueur 1 à gagné";
+                    TextVictory.text = "Lil Joe à gagné";
                 }
                 
                 if(infosPlayer1.life < infosPlayer2.life){
-                    TextVictory.text = "Joueur 2 à gagné";
+                    TextVictory.text = "Bob à gagné";
                 }
 
                 if(infosPlayer1.life == infosPlayer2.life){
