@@ -1833,6 +1833,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 0592b6f0cad4f574599b283f77d3e2f0, type: 3}
   - {fileID: 2800000, guid: 339973f0e63785c49b22818dff72ac00, type: 3}
   - {fileID: 2800000, guid: 7c1ef28220a4974448dc55a38cf88970, type: 3}
+  audioManager: {fileID: 1758547786}
 --- !u!4 &923599959
 Transform:
   m_ObjectHideFlags: 0
@@ -1866,7 +1867,7 @@ MonoBehaviour:
   infosPlayer1: {fileID: 11400000, guid: 77537efb8a17c0b44b9fe26f0850892b, type: 2}
   infosPlayer2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
   buttonManager: {fileID: 1754630640}
-  sponsorImage: {fileID: 0}
+  sponsorImage: {fileID: 729170299}
   jumbotron: {fileID: 602413081}
 --- !u!114 &923599961
 MonoBehaviour:
