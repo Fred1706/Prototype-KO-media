@@ -79,11 +79,13 @@ public class EndGame : MonoBehaviour
 
          
             
-
+            infosPlayer1.life = 5;
+            infosPlayer2.life = 5;
             infosTime.Time = infosTime.StartTime;
             
 
             Invoke("ResetGame", 7.0f);
+            Debug.Log("reset");
 
             canvasEnd.SetActive(true);
             canvasPlayer.SetActive(false);
@@ -108,7 +110,8 @@ public class EndGame : MonoBehaviour
         rightController.SetActive(true);
 
         canvasStart.SetActive(true);
-        //audioManager.GetComponent<RandomMusic>().music();
+        audioManager.GetComponent<RandomMusic>().music();
+        Debug.Log("musique");
         canvasEnd.SetActive(false);
         
 
