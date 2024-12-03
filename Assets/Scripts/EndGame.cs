@@ -56,7 +56,7 @@ public class EndGame : MonoBehaviour
     void Update()
     {
         if(infosPlayer1.life <= 0 || infosPlayer2.life <= 0 || infosTime.Time <= 0){
-            verifyVictory();
+            Invoke("verifyVictory", 0.009f);
         }
        
 
