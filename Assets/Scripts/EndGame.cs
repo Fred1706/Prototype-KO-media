@@ -27,6 +27,17 @@ public class EndGame : MonoBehaviour
 
     public TMP_Text TextVictory;
 
+
+
+
+
+
+
+
+
+
+    
+
     [SerializeField]
     private GameObject audioManager;
 
