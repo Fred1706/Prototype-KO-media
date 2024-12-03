@@ -107,8 +107,8 @@ public class EndGame : MonoBehaviour
 
 
             
-            infosPlayer1.life = 5;
-            infosPlayer2.life = 5;
+            //infosPlayer1.life = 5;
+            //infosPlayer2.life = 5;
             infosTime.Time = infosTime.StartTime;
             
             Invoke("SponsorShow", 2.0f);
