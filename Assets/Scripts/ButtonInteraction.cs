@@ -79,7 +79,7 @@ public class ButtonInteraction : MonoBehaviour
             Debug.Log("Player 1 wins!");
             _buttonPlayerWinObject.SetActive(true);
             _player1.power = true;
-            _buttonPlayerWinText.text = "Player 1 Wins!";
+            _buttonPlayerWinText.text = "Lil joe obtient le pouvoir!";
 
             
         }
@@ -87,14 +87,14 @@ public class ButtonInteraction : MonoBehaviour
             Debug.Log("Player 2 wins!");
             _buttonPlayerWinObject.SetActive(true);
             _player2.power = true;
-            _buttonPlayerWinText.text = "Player 2 Wins!";
+            _buttonPlayerWinText.text = "Bob obtient le pouvoir!";
 
             
         }
         else{
             Debug.Log("Draw!");
             _buttonPlayerWinObject.SetActive(true);
-            _buttonPlayerWinText.text = "Draw!";
+            _buttonPlayerWinText.text = "Égalité!";
 
             
         }

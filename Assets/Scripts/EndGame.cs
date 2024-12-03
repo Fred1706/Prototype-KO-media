@@ -58,28 +58,26 @@ public class EndGame : MonoBehaviour
         CanvasEndJumbotron.SetActive(true);
 
             if(infosPlayer1.life <= 0){
-                TextVictory.text = "Le joueur 2 à gagné";
-                infosPlayer1.life = 5;
-                infosPlayer2.life = 5;
+                TextVictory.text = "Bob a gagné";
+                
             }
 
             if(infosPlayer2.life <= 0){
-                TextVictory.text = "Le joueur 1 à gagné";
-                infosPlayer1.life = 5;
-                infosPlayer2.life = 5;
+                TextVictory.text = "Lil joe a gagné";
+               
             }
 
             if(infosTime.Time <= 0){
 
 
                 if(infosPlayer1.life > infosPlayer2.life){
-                    TextVictory.text = "Joueur 1 à gagné";
-                    TextVictoryJumbo.text = "Joueur 1 à gagné";
+                    TextVictory.text = "Lil joe a gagné";
+                    TextVictoryJumbo.text = "Lil joe a gagné";
                 }
                 
                 if(infosPlayer1.life < infosPlayer2.life){
-                    TextVictory.text = "Joueur 2 à gagné";
-                    TextVictoryJumbo.text = "Joueur 2 à gagné";
+                    TextVictory.text = "Bob a gagné";
+                    TextVictoryJumbo.text = "Bob a gagné";
                 }
 
                 if(infosPlayer1.life == infosPlayer2.life){
@@ -92,7 +90,8 @@ public class EndGame : MonoBehaviour
 
 
             
-
+            infosPlayer1.life = 5;
+            infosPlayer2.life = 5;
             infosTime.Time = infosTime.StartTime;
             
             Invoke("SponsorShow", 2.0f);
@@ -126,6 +125,7 @@ public class EndGame : MonoBehaviour
         rightController.SetActive(true);
 
         canvasStart.SetActive(true);
+        canvasStart.GetComponent<RandomMusic>().music();
         canvasEnd.SetActive(false);
         
 
