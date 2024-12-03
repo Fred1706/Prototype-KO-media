@@ -29,11 +29,8 @@ public class EndGame : MonoBehaviour
     public GameObject jumbotron;
 
     public TMP_Text TextVictory;
-    public TMP_Text TextVictoryJumbo;
-
-    public Texture[] sponsorTexture;
-
-    private int sponsorIndex = 1;
+    
+   
 
 
 
@@ -69,7 +66,7 @@ public class EndGame : MonoBehaviour
 
     public void verifyVictory(){
 
-        CanvasEndJumbotron.SetActive(true);
+        
 
             if(infosPlayer1.life <= 0){
 
@@ -113,7 +110,7 @@ public class EndGame : MonoBehaviour
             infosPlayer2.life = 5;
             infosTime.Time = infosTime.StartTime;
             
-            Invoke("SponsorShow", 2.0f);
+           
 
             Invoke("ResetGame", 7.0f);
             Debug.Log("reset");
@@ -152,8 +149,5 @@ public class EndGame : MonoBehaviour
 
     }
 
-    private void SponsorShow(){
-        sponsorImage.GetComponent<RawImage>().texture = sponsorTexture[sponsorIndex];
-        sponsorImage.SetActive(true);
-    }
+   
 }

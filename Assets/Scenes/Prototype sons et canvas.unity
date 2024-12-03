@@ -1675,9 +1675,12 @@ MonoBehaviour:
   canvasPlayer: {fileID: 1334610230}
   leftController: {fileID: 1188893537}
   rightController: {fileID: 1377896331}
+  CanvasEndJumbotron: {fileID: 1665927595}
   sponsorImage: {fileID: 1665927595}
   jumbotron: {fileID: 602413081}
   TextVictory: {fileID: 299326538}
+  TextVictoryJumbo: {fileID: 1873350101}
+  sponsorTexture: []
   audioManager: {fileID: 1758547786}
 --- !u!4 &923599959
 Transform:
