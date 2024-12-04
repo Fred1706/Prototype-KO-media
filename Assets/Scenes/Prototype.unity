@@ -1912,14 +1912,8 @@ MonoBehaviour:
   jumbotron: {fileID: 602413081}
   TextVictory: {fileID: 299326538}
   TextVictoryJumbo: {fileID: 698176155}
-  sponsorTexture:
-  - {fileID: 2800000, guid: 243978839bbd21743ad5cc184e2fd013, type: 3}
-  - {fileID: 2800000, guid: 94b83b8a9d91e3e4e81021429d002f52, type: 3}
-  - {fileID: 2800000, guid: a0c3edfea6981ea4f93cbc32debd6290, type: 3}
-  - {fileID: 2800000, guid: 339973f0e63785c49b22818dff72ac00, type: 3}
-  - {fileID: 2800000, guid: 7c1ef28220a4974448dc55a38cf88970, type: 3}
-  - {fileID: 2800000, guid: 0592b6f0cad4f574599b283f77d3e2f0, type: 3}
   audioManager: {fileID: 1758547786}
+  textureManager: {fileID: 1665927595}
 --- !u!4 &923599959
 Transform:
   m_ObjectHideFlags: 0
@@ -5395,6 +5389,7 @@ GameObject:
   - component: {fileID: 1665927596}
   - component: {fileID: 1665927598}
   - component: {fileID: 1665927597}
+  - component: {fileID: 1665927599}
   m_Layer: 0
   m_Name: AfficheSponsor
   m_TagString: Untagged
@@ -5441,7 +5436,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 94b83b8a9d91e3e4e81021429d002f52, type: 3}
+  m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5456,6 +5451,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665927595}
   m_CullTransparentMesh: 1
+--- !u!114 &1665927599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665927595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b2425247c5b8f4e91922a627ed67f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 2800000, guid: 243978839bbd21743ad5cc184e2fd013, type: 3}
+  - {fileID: 2800000, guid: 94b83b8a9d91e3e4e81021429d002f52, type: 3}
+  - {fileID: 2800000, guid: a0c3edfea6981ea4f93cbc32debd6290, type: 3}
+  - {fileID: 2800000, guid: 0592b6f0cad4f574599b283f77d3e2f0, type: 3}
+  - {fileID: 2800000, guid: 339973f0e63785c49b22818dff72ac00, type: 3}
+  - {fileID: 2800000, guid: 7c1ef28220a4974448dc55a38cf88970, type: 3}
+  imageUI: {fileID: 1665927595}
 --- !u!1 &1669504490
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,22 +31,18 @@ public class EndGame : MonoBehaviour
     public TMP_Text TextVictory;
     public TMP_Text TextVictoryJumbo;
  
-    public Texture[] sponsorTexture;
+    //public Texture[] sponsorTexture;
  
-    private int sponsorIndex = 1;
+    //private int sponsorIndex = 1;
  
  
     private bool IsActive = true;
  
- 
- 
- 
- 
- 
-   
- 
     [SerializeField]
     private GameObject audioManager;
+
+    [SerializeField]
+    private GameObject textureManager;
  
  
     // Start is called before the first frame update
@@ -114,7 +110,7 @@ public class EndGame : MonoBehaviour
  
            
                 if(IsActive == true){
-                Invoke("SponsorShow", 2.0f);
+                //Invoke("SponsorShow", 2.0f);
                 Invoke("ResetGame", 7.0f);
                 Debug.Log("reset");
                 IsActive = false;
@@ -144,7 +140,7 @@ public class EndGame : MonoBehaviour
  
         IsActive = true;
  
-        sponsorIndex = Random.Range(0, 5);
+        //sponsorIndex = Random.Range(0, 5);
  
         infosTime.ready = 0;
  
@@ -157,14 +153,15 @@ public class EndGame : MonoBehaviour
  
         canvasStart.SetActive(true);
         canvasStart.GetComponent<RandomMusic>().music();
+        textureManager.GetComponent<RandomTexture>().ChangerImage();
         Debug.Log("music");
         canvasEnd.SetActive(false);
        
- 
-    }
- 
-    private void SponsorShow(){
-        sponsorImage.GetComponent<RawImage>().texture = sponsorTexture[sponsorIndex];
         sponsorImage.SetActive(true);
     }
+ 
+    //private void SponsorShow(){
+     //   sponsorImage.GetComponent<RawImage>().texture = sponsorTexture[sponsorIndex];
+    //    sponsorImage.SetActive(true);
+    //}
 }
