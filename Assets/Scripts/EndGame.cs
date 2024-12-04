@@ -138,7 +138,7 @@ public class EndGame : MonoBehaviour
  
     private void ResetGame(){
  
-        IsActive = true;
+        
  
         //sponsorIndex = Random.Range(0, 5);
  
@@ -158,6 +158,8 @@ public class EndGame : MonoBehaviour
         canvasEnd.SetActive(false);
        
         sponsorImage.SetActive(true);
+        
+        IsActive = true;
     }
  
     //private void SponsorShow(){
