@@ -23,6 +23,10 @@ public class CollisionJoueur : MonoBehaviour
     private InfosTime time;
 
 
+    private bool invincible1 = false;
+    private bool invincible2 = false;
+
+
     
     
 
@@ -35,15 +39,21 @@ public class CollisionJoueur : MonoBehaviour
 
         //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity){
-            Debug.Log("Blocked");
+            
             audioManager.GetComponent<RandomSons>().Block();
         }
 
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove1"){
             
-            audioManager.GetComponent<RandomSons>().Hit();
-            infoPlayer2.life --;
+           if(invincible2 == false){
+                audioManager.GetComponent<RandomSons>().Hit();
+                infoPlayer2.life --;
+
+                SetInvincible2();
+            }
+            
+            
 
             
         }
@@ -54,17 +64,21 @@ public class CollisionJoueur : MonoBehaviour
 
          //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityl >= requiredVelocity ){
-            Debug.Log("Blocked");
+            ;
             audioManager.GetComponent<RandomSons>().Block();
         }
 
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player" && velocityTracker.velocityl >= requiredVelocity && gameObject.transform.tag == "Glove1"){
             
-            audioManager.GetComponent<RandomSons>().Hit();
-            infoPlayer2.life --;
+            if(invincible2 == false){
+                audioManager.GetComponent<RandomSons>().Hit();
+                infoPlayer2.life --;
 
-           
+                SetInvincible2();
+            }
+            
+            
         }
 
 
@@ -74,14 +88,20 @@ public class CollisionJoueur : MonoBehaviour
 
         //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity){
-            Debug.Log("Blocked");
+            
             audioManager.GetComponent<RandomSons>().Block();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove"){
             
-            audioManager.GetComponent<RandomSons>().Hit();
-            infoPlayer1.life --;
+           if(invincible1 == false){
+                audioManager.GetComponent<RandomSons>().Hit();
+                infoPlayer1.life --;
+
+                SetInvincible1();
+            }
+            
+            
 
            
         }
@@ -92,15 +112,21 @@ public class CollisionJoueur : MonoBehaviour
 
          //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityl >= requiredVelocity){
-            Debug.Log("Blocked");
+            
             audioManager.GetComponent<RandomSons>().Block();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityl >= requiredVelocity && gameObject.transform.tag == "Glove"){
             
-            audioManager.GetComponent<RandomSons>().Hit();
-            infoPlayer1.life --;
 
+            if(invincible1 == false){
+                audioManager.GetComponent<RandomSons>().Hit();
+                infoPlayer1.life --;
+
+                SetInvincible1();
+            }
+            
+            
            
         }
 
@@ -113,6 +139,29 @@ public class CollisionJoueur : MonoBehaviour
             time.ready = 2;
         }
         
+    }
+
+
+    private void SetInvincible1(){
+        invincible1 = true;
+        Debug.Log("invincible 1");
+        Invoke("RemoveInvincible1", 4f);
+    }
+
+    private void SetInvincible2(){
+        invincible2 = true;
+        Debug.Log("invincible 2");
+        Invoke("RemoveInvincible2", 4f);
+    }
+
+    private void RemoveInvincible1(){
+        invincible1 = false;
+        Debug.Log("pu invincible 1");
+    }
+
+    private void RemoveInvincible2(){
+        invincible2 = false;
+        Debug.Log("pu invincible 2");
     }
 
 }
