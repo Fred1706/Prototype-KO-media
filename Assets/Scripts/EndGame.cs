@@ -159,11 +159,18 @@ public class EndGame : MonoBehaviour
        
         sponsorImage.SetActive(true);
         
-        IsActive = true;
+        Invoke("ChangeActive", 1.0f);
     }
  
     //private void SponsorShow(){
      //   sponsorImage.GetComponent<RawImage>().texture = sponsorTexture[sponsorIndex];
     //    sponsorImage.SetActive(true);
     //}
+
+
+
+
+    private void ChangeActive(){
+        IsActive = true;
+    }
 }
