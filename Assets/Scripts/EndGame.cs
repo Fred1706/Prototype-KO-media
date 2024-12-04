@@ -36,7 +36,7 @@ public class EndGame : MonoBehaviour
     private int sponsorIndex = 1;
 
 
-
+    private bool IsActive = true;
 
 
 
@@ -69,7 +69,7 @@ public class EndGame : MonoBehaviour
 
     public void verifyVictory(){
 
-        Debug.Log("victo");
+        
 
 
         CanvasEndJumbotron.SetActive(true);
@@ -107,16 +107,23 @@ public class EndGame : MonoBehaviour
 
 
             
-            Debug.Log("av vie");
-            infosTime.Time = infosTime.StartTime;
+            
+            
 
-            infosPlayer1.life = 5;
-            infosPlayer2.life = 5;
-            Invoke("SponsorShow", 2.0f);
+            
 
-            Invoke("ResetGame", 7.0f);
-            Debug.Log("reset");
-
+            
+                if(IsActive == true){
+                Invoke("SponsorShow", 2.0f);
+                Invoke("ResetGame", 7.0f);
+                Debug.Log("reset"); 
+                IsActive = false;
+                }
+                
+                
+            
+            
+            
             canvasEnd.SetActive(true);
             canvasPlayer.SetActive(false);
             jumbotron.SetActive(false);
@@ -126,6 +133,8 @@ public class EndGame : MonoBehaviour
             sponsorImage.SetActive(false);
 
             
+        
+            
     }
 
 
@@ -133,19 +142,22 @@ public class EndGame : MonoBehaviour
 
     private void ResetGame(){
 
+        IsActive = true;
+
         sponsorIndex = Random.Range(0, 5);
 
         infosTime.ready = 0;
 
         infosPlayer1.life = 5;
         infosPlayer2.life = 5;
+        infosTime.Time = infosTime.StartTime;
 
         leftController.SetActive(true);
         rightController.SetActive(true);
 
         canvasStart.SetActive(true);
         canvasStart.GetComponent<RandomMusic>().music();
-        Debug.Log("reset");
+        Debug.Log("music");
         canvasEnd.SetActive(false);
         
 

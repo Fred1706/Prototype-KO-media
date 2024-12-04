@@ -17,16 +17,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Test-Collision.unity
     guid: ebd10c2ce96565a4581b801dd6761cb8
-  - enabled: 1
-
-    path: Assets/Scenes/Prototype sons et canvas.unity
-    guid: dead16cb59c9c2b42a9711bbb7c4eec5
-
-    path: Assets/Scenes/CanvasEnd.unity
-    guid: 845bc58ff8e939244bfb1d271eac8618
-
   m_configObjects:
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ae8d8125ec4179947a0a8e8b894410ba,
-      type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: d22c27667b4914d40ae2370e0c471aac,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 43d1f97278ffc644987d9342c99a23b1,
       type: 2}
