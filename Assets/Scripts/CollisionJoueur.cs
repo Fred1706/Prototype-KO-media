@@ -49,11 +49,10 @@ public class CollisionJoueur : MonoBehaviour
            if(invincible2 == false){
                 audioManager.GetComponent<RandomSons>().Hit();
                 infoPlayer2.life --;
-
-                SetInvincible2();
+                 SetInvincible2();
             }
             
-            
+           
 
             
         }
@@ -64,7 +63,7 @@ public class CollisionJoueur : MonoBehaviour
 
          //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityl >= requiredVelocity ){
-            ;
+            
             audioManager.GetComponent<RandomSons>().Block();
         }
 
