@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class CollisionJoueur : MonoBehaviour
 {
@@ -27,6 +28,13 @@ public class CollisionJoueur : MonoBehaviour
     private bool invincible2 = false;
 
 
+    [SerializeField]
+    private VisualEffect vfxB;
+
+    [SerializeField]
+    private VisualEffect vfxR;
+
+
     
     
 
@@ -50,6 +58,7 @@ public class CollisionJoueur : MonoBehaviour
                 audioManager.GetComponent<RandomSons>().Hit();
                 infoPlayer2.life --;
                  SetInvincible2();
+                 vfxB.Play();
             }
             
            
@@ -75,6 +84,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer2.life --;
 
                 SetInvincible2();
+                vfxB.Play();
             }
             
             
@@ -98,6 +108,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer1.life --;
 
                 SetInvincible1();
+                vfxR.Play();
             }
             
             
@@ -123,6 +134,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer1.life --;
 
                 SetInvincible1();
+                vfxR.Play();
             }
             
             
