@@ -10,8 +10,8 @@ public class CanvasPlayer : MonoBehaviour
     public InfosPlayer infosPlayer2;
 
 
-    public TMP_Text Player1Text;
-    public TMP_Text Player2Text;
+    public GameObject[] CoeursB;
+    public GameObject[] CoeursR;
 
 
     // Start is called before the first frame update
@@ -24,12 +24,11 @@ public class CanvasPlayer : MonoBehaviour
     void Update()
     {
         
+        CoeursB[infosPlayer2.life].SetActive(false);
 
+        CoeursR[infosPlayer1.life].SetActive(false);
 
-        Player1Text.text = infosPlayer1.life.ToString();
-
-
-        Player2Text.text = infosPlayer2.life.ToString();
+        
 
         
 
