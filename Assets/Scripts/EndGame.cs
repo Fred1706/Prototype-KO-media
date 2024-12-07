@@ -43,6 +43,10 @@ public class EndGame : MonoBehaviour
 
     [SerializeField]
     private GameObject textureManager;
+
+
+     public GameObject[] CoeursB;
+    public GameObject[] CoeursR;
  
  
     // Start is called before the first frame update
@@ -160,6 +164,19 @@ public class EndGame : MonoBehaviour
         sponsorImage.SetActive(true);
         
         Invoke("ChangeActive", 1.0f);
+
+        CoeursB[0].SetActive(true);
+        CoeursB[1].SetActive(true);
+        CoeursB[2].SetActive(true);
+        CoeursB[3].SetActive(true);
+        CoeursB[4].SetActive(true);
+
+
+        CoeursR[0].SetActive(true);
+        CoeursR[1].SetActive(true);
+        CoeursR[2].SetActive(true);
+        CoeursR[3].SetActive(true);
+        CoeursR[4].SetActive(true);
     }
  
     //private void SponsorShow(){

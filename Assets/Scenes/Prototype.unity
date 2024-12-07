@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1113305}
   - component: {fileID: 1113306}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-blu (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86643917}
   - component: {fileID: 86643918}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-red (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1431,7 +1431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216128038}
   - component: {fileID: 216128039}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-red (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2012,7 +2012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 357364731}
   - component: {fileID: 357364732}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-red (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3873,7 +3873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742486115}
   - component: {fileID: 742486116}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-red (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4358,6 +4358,18 @@ MonoBehaviour:
   TextVictoryJumbo: {fileID: 698176155}
   audioManager: {fileID: 1336031491}
   textureManager: {fileID: 1665927595}
+  CoeursB:
+  - {fileID: 1670338409}
+  - {fileID: 1686012162}
+  - {fileID: 2118179134}
+  - {fileID: 1603807810}
+  - {fileID: 1113304}
+  CoeursR:
+  - {fileID: 2040040786}
+  - {fileID: 742486114}
+  - {fileID: 216128037}
+  - {fileID: 357364730}
+  - {fileID: 86643916}
 --- !u!4 &923599959
 Transform:
   m_ObjectHideFlags: 0
@@ -9034,7 +9046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603807811}
   - component: {fileID: 1603807812}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-blu (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9646,7 +9658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1670338410}
   - component: {fileID: 1670338411}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-blu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9829,7 +9841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686012163}
   - component: {fileID: 1686012164}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-blu (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12084,7 +12096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040040787}
   - component: {fileID: 2040040788}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12522,7 +12534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118179135}
   - component: {fileID: 2118179136}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: coeur-blu (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
