@@ -53,7 +53,7 @@ public class CollisionJoueur : MonoBehaviour
             
             audioManager.GetComponent<RandomSons>().Block();
             Debug.Log("joueur 2 a bloquer");
-            SetInvincible2();
+            //SetInvincible2();
         }
 
         //Vérifie la collision avec un joueur.
@@ -61,9 +61,9 @@ public class CollisionJoueur : MonoBehaviour
             
            if(invincible2 == false){
                 //audioManager.GetComponent<RandomSons>().Hit();
-                infoPlayer2.life --;
-                 SetInvincible2();
-                 vfxB.GetComponent<VisualEffect>().Play();
+                //infoPlayer2.life --;
+                // SetInvincible2();
+                 //vfxB.GetComponent<VisualEffect>().Play();
 
                  
             }
@@ -82,7 +82,7 @@ public class CollisionJoueur : MonoBehaviour
             
             audioManager.GetComponent<RandomSons>().Block();
             Debug.Log("joueur 2 a bloquer");
-            SetInvincible2();
+           // SetInvincible2();
         }
 
         //Vérifie la collision avec un joueur.
@@ -90,10 +90,10 @@ public class CollisionJoueur : MonoBehaviour
             
             if(invincible2 == false){
                 //audioManager.GetComponent<RandomSons>().Hit();
-                infoPlayer2.life --;
+                //infoPlayer2.life --;
 
-                SetInvincible2();
-                vfxB.GetComponent<VisualEffect>().Play();
+                //SetInvincible2();
+                //vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
@@ -109,17 +109,17 @@ public class CollisionJoueur : MonoBehaviour
             
             audioManager.GetComponent<RandomSons>().Block();
             Debug.Log("joueur 1 a bloquer");
-            SetInvincible1();
+           // SetInvincible1();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove"){
             
            if(invincible1 == false){
                 //audioManager.GetComponent<RandomSons>().Hit();
-                infoPlayer1.life --;
+               // infoPlayer1.life --;
 
-                SetInvincible1();
-                vfxB.GetComponent<VisualEffect>().Play();
+                //SetInvincible1();
+                //vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
@@ -136,7 +136,7 @@ public class CollisionJoueur : MonoBehaviour
             
             audioManager.GetComponent<RandomSons>().Block();
             Debug.Log("joueur 1 a bloquer");
-            SetInvincible1();
+           // SetInvincible1();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityl >= requiredVelocity && gameObject.transform.tag == "Glove"){
@@ -144,10 +144,10 @@ public class CollisionJoueur : MonoBehaviour
 
             if(invincible1 == false){
                 //audioManager.GetComponent<RandomSons>().Hit();
-                infoPlayer1.life --;
+                //infoPlayer1.life --;
 
-                SetInvincible1();
-                vfxB.GetComponent<VisualEffect>().Play();
+                //SetInvincible1();
+                //vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
