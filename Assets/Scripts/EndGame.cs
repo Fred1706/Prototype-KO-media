@@ -131,6 +131,8 @@ public class EndGame : MonoBehaviour
             rightController.SetActive(false);
             CanvasEndJumbotron.SetActive(false);
             sponsorImage.SetActive(false);
+            infosPlayer2.diff = true;
+            infosPlayer1.diff = true;
  
            
        

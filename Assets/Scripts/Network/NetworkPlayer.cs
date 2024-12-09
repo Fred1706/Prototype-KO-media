@@ -107,6 +107,14 @@ public class NetworkPlayer : NetworkBehaviour
         }
 
 
+
+       
+
+
+
+        
+
+
        
     }
   
@@ -161,6 +169,55 @@ public class NetworkPlayer : NetworkBehaviour
             infoPlayer2.powerLocal = false;
         }
 
+
+
+
+
+
+         if(IsHost && IsOwner && infoPlayer1.diff == true){
+
+             GameObject XRorigin = GameObject.Find("XR Origin (XR Rig)");
+
+        if (XRorigin != null)
+        {
+            Debug.Log("Game object found!");
+
+            XRorigin.transform.position = new Vector3(-1, 0, -1);
+
+
+            XRorigin.transform.rotation = Quaternion.Euler(0, 38, 0);
+
+
+            infoPlayer1.diff = false;
+        }
+        
+            
+        }
+
+
+
+
+
+        if(!IsHost && IsOwner && infoPlayer2.diff == true){
+
+             GameObject XRorigin = GameObject.Find("XR Origin (XR Rig)");
+
+        if (XRorigin != null)
+        {
+            Debug.Log("Game object found!");
+
+             XRorigin.transform.position = new Vector3(0.565f, 0, 0.565f);
+
+
+            XRorigin.transform.rotation = Quaternion.Euler(0, 228.5f, 0);
+
+            infoPlayer2.diff = false;
+
+        }
+        
+            
+        }
+
         
 
         
@@ -169,7 +226,7 @@ public class NetworkPlayer : NetworkBehaviour
 
 
     
-
+        
 
 
     

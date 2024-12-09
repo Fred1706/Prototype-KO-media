@@ -13,6 +13,8 @@ public class InfosPlayer : ScriptableObject
     public bool power;
     public bool powerLocal;
 
+    public bool diff;
+
    
 
     private void OnEnable()
@@ -21,5 +23,6 @@ public class InfosPlayer : ScriptableObject
         life = 5;
         power = false;
         powerLocal = false;
+        diff = false;
     }
 }

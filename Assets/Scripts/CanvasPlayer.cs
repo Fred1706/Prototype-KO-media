@@ -23,6 +23,8 @@ public class CanvasPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
         
         CoeursB[infosPlayer2.life].SetActive(false);
 
