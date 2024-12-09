@@ -138,7 +138,7 @@ public class EndGame : MonoBehaviour
            
                 if(IsActive == true){
                 //Invoke("SponsorShow", 2.0f);
-                Invoke("ResetGame", 5.0f);
+                Invoke("ResetGame", 7.0f);
                 
 
                 IsActive = false;

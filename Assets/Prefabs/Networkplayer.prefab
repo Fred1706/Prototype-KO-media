@@ -330,7 +330,6 @@ MonoBehaviour:
   infoPlayer1: {fileID: 11400000, guid: 77537efb8a17c0b44b9fe26f0850892b, type: 2}
   infoPlayer2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
   time: {fileID: 11400000, guid: ad6dfaa06eb718d4188efa3965e3ebad, type: 2}
-  vfxB: {fileID: 3361379337734165185}
   vfxR: {fileID: 1892013946717912445}
 --- !u!54 &2691923913467991694
 Rigidbody:
@@ -506,7 +505,6 @@ MonoBehaviour:
   infoPlayer1: {fileID: 11400000, guid: 77537efb8a17c0b44b9fe26f0850892b, type: 2}
   infoPlayer2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
   time: {fileID: 11400000, guid: ad6dfaa06eb718d4188efa3965e3ebad, type: 2}
-  vfxB: {fileID: 3361379337734165185}
   vfxR: {fileID: 1892013946717912445}
 --- !u!114 &3756865828260364984
 MonoBehaviour:
@@ -816,7 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2085436679
+  GlobalObjectIdHash: 2136484712
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -885,6 +883,7 @@ MonoBehaviour:
   - {fileID: 6326167259482395639}
   - {fileID: 1169082599745472029}
   - {fileID: 4145109981934459900}
+  - {fileID: 4564839169804043369}
   headAppear:
   - {fileID: 8391810142583921662}
   - {fileID: 7775076296907889788}
@@ -1476,6 +1475,12 @@ MeshRenderer:
 --- !u!1 &3046103075126018376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8829162335977603417, guid: 5744af05d96aeac4c9219c1d8d0866ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 5819375047653490705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4564839169804043369 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8042025734691947640, guid: 5744af05d96aeac4c9219c1d8d0866ce,
     type: 3}
   m_PrefabInstance: {fileID: 5819375047653490705}
   m_PrefabAsset: {fileID: 0}

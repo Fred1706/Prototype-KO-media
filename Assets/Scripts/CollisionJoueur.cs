@@ -28,14 +28,17 @@ public class CollisionJoueur : MonoBehaviour
     private bool invincible2 = false;
 
 
-    [SerializeField]
-    private VisualEffect vfxB;
+    
+    
+    
 
     [SerializeField]
     private VisualEffect vfxR;
 
-
     
+
+
+  
     
 
 
@@ -43,7 +46,7 @@ public class CollisionJoueur : MonoBehaviour
 
         VelocityTracker velocityTracker = XrOrigin.GetComponent<VelocityTracker>();
         
-
+        GameObject vfxB = GameObject.Find("VFX_hit_2_blue");
 
         //Vérifie la collision avec un gant.
         if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove1"){
@@ -60,7 +63,9 @@ public class CollisionJoueur : MonoBehaviour
                 //audioManager.GetComponent<RandomSons>().Hit();
                 infoPlayer2.life --;
                  SetInvincible2();
-                 vfxB.Play();
+                 vfxB.GetComponent<VisualEffect>().Play();
+
+                 
             }
             
            
@@ -88,7 +93,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer2.life --;
 
                 SetInvincible2();
-                vfxB.Play();
+                vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
@@ -114,7 +119,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer1.life --;
 
                 SetInvincible1();
-                vfxR.Play();
+                vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
@@ -142,7 +147,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer1.life --;
 
                 SetInvincible1();
-                vfxR.Play();
+                vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
