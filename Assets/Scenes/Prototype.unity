@@ -3433,6 +3433,8 @@ MonoBehaviour:
   - {fileID: 1720547934}
   - {fileID: 1720547934}
   - {fileID: 1720547934}
+  Text1: {fileID: 943457823}
+  Text2: {fileID: 162122160}
 --- !u!114 &602413086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7183,6 +7185,8 @@ MonoBehaviour:
   - {fileID: 742486114}
   - {fileID: 2040040786}
   - {fileID: 1720547934}
+  Text1: {fileID: 0}
+  Text2: {fileID: 0}
 --- !u!82 &1334610238
 AudioSource:
   m_ObjectHideFlags: 0

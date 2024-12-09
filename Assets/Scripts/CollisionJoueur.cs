@@ -63,7 +63,7 @@ public class CollisionJoueur : MonoBehaviour
                 //audioManager.GetComponent<RandomSons>().Hit();
                 infoPlayer2.life --;
                  SetInvincible2();
-                 vfxB.GetComponent<VisualEffect>().Play();
+                 //vfxB.GetComponent<VisualEffect>().Play();
 
                  
             }
@@ -93,7 +93,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer2.life --;
 
                 SetInvincible2();
-                vfxB.GetComponent<VisualEffect>().Play();
+                //vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
@@ -119,7 +119,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer1.life --;
 
                 SetInvincible1();
-                vfxB.GetComponent<VisualEffect>().Play();
+               /// vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
@@ -147,7 +147,7 @@ public class CollisionJoueur : MonoBehaviour
                 infoPlayer1.life --;
 
                 SetInvincible1();
-                vfxB.GetComponent<VisualEffect>().Play();
+                //vfxB.GetComponent<VisualEffect>().Play();
             }
             
             
