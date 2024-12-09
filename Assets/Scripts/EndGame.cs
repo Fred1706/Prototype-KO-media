@@ -141,6 +141,7 @@ public class EndGame : MonoBehaviour
                 Invoke("ResetGame", 5.0f);
                 Debug.Log("reset");
                 IsActive = false;
+                Debug.Log("call reset");
                 }
                
                
@@ -183,7 +184,7 @@ public class EndGame : MonoBehaviour
         canvasStart.SetActive(true);
         canvasStart.GetComponent<RandomMusic>().music();
         textureManager.GetComponent<RandomTexture>().ChangerImage();
-        Debug.Log("music");
+        Debug.Log("reset");
         canvasEnd.SetActive(false);
        
         sponsorImage.SetActive(true);

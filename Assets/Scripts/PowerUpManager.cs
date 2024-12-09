@@ -14,8 +14,8 @@ public class PowerUpManager : MonoBehaviour
     private GameObject _player1Body;
     [SerializeField]
     private float powerUpTime = 4f;
-    [SerializeField]
-    private float powerUpSize = 1.5f;
+    //[SerializeField]
+    //private float powerUpSize = 1.5f;
     private int _playerIndex;
     public void PowerUpSelection(){
         if(_player1.power == true){

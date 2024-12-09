@@ -15,4 +15,4 @@ MonoBehaviour:
   life: 5
   power: 0
   powerLocal: 0
-  diff: 1
+  diff: 0

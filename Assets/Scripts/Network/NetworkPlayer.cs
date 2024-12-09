@@ -180,7 +180,7 @@ public class NetworkPlayer : NetworkBehaviour
 
         if (XRorigin != null)
         {
-            Debug.Log("Game object found!");
+            
 
             XRorigin.transform.position = new Vector3(-1, 0, -1);
 
@@ -204,7 +204,7 @@ public class NetworkPlayer : NetworkBehaviour
 
         if (XRorigin != null)
         {
-            Debug.Log("Game object found!");
+            
 
              XRorigin.transform.position = new Vector3(0.565f, 0, 0.565f);
 
