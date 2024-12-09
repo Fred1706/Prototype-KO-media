@@ -139,7 +139,8 @@ public class EndGame : MonoBehaviour
                 if(IsActive == true){
                 //Invoke("SponsorShow", 2.0f);
                 Invoke("ResetGame", 5.0f);
-                Debug.Log("reset");
+                
+
                 IsActive = false;
                 Debug.Log("call reset");
                 }
@@ -189,7 +190,7 @@ public class EndGame : MonoBehaviour
        
         sponsorImage.SetActive(true);
         
-        Invoke("ChangeActive", 1.0f);
+        Invoke("ChangeActive", 0.5f);
 
         CoeursB[0].SetActive(true);
         CoeursB[1].SetActive(true);

@@ -671,7 +671,6 @@ MonoBehaviour:
   _player2: {fileID: 11400000, guid: 0f132767b0d437b4a8f15f09e919111d, type: 2}
   _player1Body: {fileID: 1477974278}
   powerUpTime: 4
-  powerUpSize: 1.5
 --- !u!4 &100699818
 Transform:
   m_ObjectHideFlags: 0
@@ -11106,7 +11105,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 10.35, z: 14.38}
-  m_Center: {x: 5.66, y: 0, z: 0}
+  m_Center: {x: 5.32, y: 0, z: 0}
 --- !u!65 &1754715589
 BoxCollider:
   m_ObjectHideFlags: 0
