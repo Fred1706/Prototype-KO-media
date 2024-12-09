@@ -190,7 +190,7 @@ public class EndGame : MonoBehaviour
        
         sponsorImage.SetActive(true);
         
-        Invoke("ChangeActive", 0.5f);
+        ChangeActive();
 
         CoeursB[0].SetActive(true);
         CoeursB[1].SetActive(true);
