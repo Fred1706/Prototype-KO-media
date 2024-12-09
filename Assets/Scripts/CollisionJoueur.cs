@@ -57,7 +57,7 @@ public class CollisionJoueur : MonoBehaviour
         else if(other.transform.tag == "Player" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove1"){
             
            if(invincible2 == false){
-                audioManager.GetComponent<RandomSons>().Hit();
+                //audioManager.GetComponent<RandomSons>().Hit();
                 infoPlayer2.life --;
                  SetInvincible2();
                  vfxB.Play();
@@ -84,7 +84,7 @@ public class CollisionJoueur : MonoBehaviour
         else if(other.transform.tag == "Player" && velocityTracker.velocityl >= requiredVelocity && gameObject.transform.tag == "Glove1"){
             
             if(invincible2 == false){
-                audioManager.GetComponent<RandomSons>().Hit();
+                //audioManager.GetComponent<RandomSons>().Hit();
                 infoPlayer2.life --;
 
                 SetInvincible2();
@@ -110,7 +110,7 @@ public class CollisionJoueur : MonoBehaviour
         else if(other.transform.tag == "Player1" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove"){
             
            if(invincible1 == false){
-                audioManager.GetComponent<RandomSons>().Hit();
+                //audioManager.GetComponent<RandomSons>().Hit();
                 infoPlayer1.life --;
 
                 SetInvincible1();
@@ -138,7 +138,7 @@ public class CollisionJoueur : MonoBehaviour
             
 
             if(invincible1 == false){
-                audioManager.GetComponent<RandomSons>().Hit();
+                //audioManager.GetComponent<RandomSons>().Hit();
                 infoPlayer1.life --;
 
                 SetInvincible1();
