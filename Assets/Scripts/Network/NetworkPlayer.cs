@@ -72,7 +72,10 @@ public class NetworkPlayer : NetworkBehaviour
         }
         else if(!IsHost && !IsOwner){
 
-            
+             headTag.tag = "Player1";
+            leftHandTag.tag = "Glove1";
+            rightHandTag.tag = "Glove1";
+
 
 
             headplayer2.SetActive(false);
