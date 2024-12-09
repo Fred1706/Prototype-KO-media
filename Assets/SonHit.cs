@@ -52,5 +52,14 @@ public class SonHit : MonoBehaviour
         }
 
 
+
+
+        if(infoPlayer1.life == 0 || infoPlayer2.life == 0){
+
+            currentValue2 = infoPlayer2.life;
+            currentValue1 = infoPlayer1.life;
+            
+        }
+
     }
 }
