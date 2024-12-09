@@ -84,14 +84,14 @@ public class EndGame : MonoBehaviour
         CanvasEndJumbotron.SetActive(true);
  
             if(infosPlayer1.life <= 0){
-                TextVictory.text = "Bob a gagné";
+                TextVictory.text = "Le coin bleu a gagné";
                
                RenderBob.SetActive(true);
                VideoBob.SetActive(true);
             }
  
             if(infosPlayer2.life <= 0){
-                TextVictory.text = "Lil joe a gagné";
+                TextVictory.text = "Le coin rouge a gagné";
 
                 RenderJoe.SetActive(true);
                VideoJoe.SetActive(true);
@@ -102,16 +102,16 @@ public class EndGame : MonoBehaviour
  
  
                 if(infosPlayer1.life > infosPlayer2.life){
-                    TextVictory.text = "Lil joe a gagné";
-                    TextVictoryJumbo.text = "Lil joe a gagné";
+                    TextVictory.text = "Le coin rouge a gagné";
+                    TextVictoryJumbo.text = "Le coin rouge a gagné";
 
                     RenderJoe.SetActive(true);
                     VideoJoe.SetActive(true);
                 }
                
                 if(infosPlayer1.life < infosPlayer2.life){
-                    TextVictory.text = "Bob a gagné";
-                    TextVictoryJumbo.text = "Bob a gagné";
+                    TextVictory.text = "Le coin bleu a gagné";
+                    TextVictoryJumbo.text = "Le coin bleu a gagné";
 
                      RenderBob.SetActive(true);
                     VideoBob.SetActive(true);
