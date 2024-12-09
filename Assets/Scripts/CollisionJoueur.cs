@@ -46,9 +46,11 @@ public class CollisionJoueur : MonoBehaviour
 
 
         //Vérifie la collision avec un gant.
-        if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity){
+        if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove1"){
             
             audioManager.GetComponent<RandomSons>().Block();
+            Debug.Log("joueur 2 a bloquer");
+            SetInvincible2();
         }
 
         //Vérifie la collision avec un joueur.
@@ -71,9 +73,11 @@ public class CollisionJoueur : MonoBehaviour
 
 
          //Vérifie la collision avec un gant.
-        if(other.transform.tag == "Glove" && velocityTracker.velocityl >= requiredVelocity ){
+        if(other.transform.tag == "Glove" && velocityTracker.velocityl >= requiredVelocity && gameObject.transform.tag == "Glove1"){
             
             audioManager.GetComponent<RandomSons>().Block();
+            Debug.Log("joueur 2 a bloquer");
+            SetInvincible2();
         }
 
         //Vérifie la collision avec un joueur.
@@ -96,9 +100,11 @@ public class CollisionJoueur : MonoBehaviour
 
 
         //Vérifie la collision avec un gant.
-        if(other.transform.tag == "Glove" && velocityTracker.velocityr >= requiredVelocity){
+        if(other.transform.tag == "Glove1" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove"){
             
             audioManager.GetComponent<RandomSons>().Block();
+            Debug.Log("joueur 1 a bloquer");
+            SetInvincible1();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove"){
@@ -121,9 +127,11 @@ public class CollisionJoueur : MonoBehaviour
 
 
          //Vérifie la collision avec un gant.
-        if(other.transform.tag == "Glove" && velocityTracker.velocityl >= requiredVelocity){
+        if(other.transform.tag == "Glove1" && velocityTracker.velocityr >= requiredVelocity && gameObject.transform.tag == "Glove"){
             
             audioManager.GetComponent<RandomSons>().Block();
+            Debug.Log("joueur 1 a bloquer");
+            SetInvincible1();
         }
         //Vérifie la collision avec un joueur.
         else if(other.transform.tag == "Player1" && velocityTracker.velocityl >= requiredVelocity && gameObject.transform.tag == "Glove"){
@@ -156,13 +164,13 @@ public class CollisionJoueur : MonoBehaviour
     private void SetInvincible1(){
         invincible1 = true;
         Debug.Log("invincible 1");
-        Invoke("RemoveInvincible1", 4f);
+        Invoke("RemoveInvincible1", 2f);
     }
 
     private void SetInvincible2(){
         invincible2 = true;
         Debug.Log("invincible 2");
-        Invoke("RemoveInvincible2", 4f);
+        Invoke("RemoveInvincible2", 2f);
     }
 
     private void RemoveInvincible1(){
