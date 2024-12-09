@@ -45,8 +45,17 @@ public class EndGame : MonoBehaviour
     private GameObject textureManager;
 
 
-     public GameObject[] CoeursB;
+    public GameObject[] CoeursB;
     public GameObject[] CoeursR;
+
+    public GameObject RenderBob;
+    public GameObject VideoBob;
+
+    public GameObject RenderJoe;
+    public GameObject VideoJoe;
+
+    public GameObject RenderDraw;
+    public GameObject VideoDraw;
  
  
     // Start is called before the first frame update
@@ -77,10 +86,15 @@ public class EndGame : MonoBehaviour
             if(infosPlayer1.life <= 0){
                 TextVictory.text = "Bob a gagné";
                
+               RenderBob.SetActive(true);
+               VideoBob.SetActive(true);
             }
  
             if(infosPlayer2.life <= 0){
                 TextVictory.text = "Lil joe a gagné";
+
+                RenderJoe.SetActive(true);
+               VideoJoe.SetActive(true);
                
             }
  
@@ -90,16 +104,25 @@ public class EndGame : MonoBehaviour
                 if(infosPlayer1.life > infosPlayer2.life){
                     TextVictory.text = "Lil joe a gagné";
                     TextVictoryJumbo.text = "Lil joe a gagné";
+
+                    RenderJoe.SetActive(true);
+                    VideoJoe.SetActive(true);
                 }
                
                 if(infosPlayer1.life < infosPlayer2.life){
                     TextVictory.text = "Bob a gagné";
                     TextVictoryJumbo.text = "Bob a gagné";
+
+                     RenderBob.SetActive(true);
+                    VideoBob.SetActive(true);
                 }
  
                 if(infosPlayer1.life == infosPlayer2.life){
                     TextVictory.text = "Égalité";
                     TextVictoryJumbo.text = "Égalité";
+
+                     RenderDraw.SetActive(true);
+                    VideoDraw.SetActive(true);
                 }
  
                
@@ -179,6 +202,14 @@ public class EndGame : MonoBehaviour
         CoeursR[2].SetActive(true);
         CoeursR[3].SetActive(true);
         CoeursR[4].SetActive(true);
+
+
+        RenderBob.SetActive(false);
+        VideoBob.SetActive(false);
+        RenderJoe.SetActive(false);
+        VideoJoe.SetActive(false);
+        RenderDraw.SetActive(false);
+        VideoDraw.SetActive(false);
     }
  
     //private void SponsorShow(){
